@@ -1,0 +1,28 @@
+
+# API网关配置
+zuul:
+  routes:
+    api-user:
+      path: /api-room/** # /api-user开头的请求，全部转发到sea-service-user服务中去
+      service-id: hms-service-room # 应用名称
+    api-shop:
+      path: /api-shop/** # /api-shop开头的请求，全部转发到sea-web-shop服务中去
+      service-id: sea-web-shop # 应用名称
+  sensitive-headers:
+
+eureka:
+  instance:
+    hostname: localhost # 服务提供者应用所在的主机（本地测试的话，使用localhost或者127.0.0.1即可，或者在host文件中指定一个虚拟域名也可以）
+    lease-renewal-interval-in-seconds: 5 # 心跳时间，表示eureka client发送心跳给eureka server端的频率（缺省为30s）
+  client:
+    service-url:
+      defaultZone: http://server.eureka.slave1.com:18761/eureka,http://server.eureka.slave2.com:28761/eureka # 指定eureka服务器集群列表地址
+
+# 需要设置timeoutInMilliseconds属性，不然的话，hystrix断路器不起作用，页面就会报错（如果配置了timeoutInMilliseconds属性，则会执行我们的断路器回调方法）；同时，值的大小也是有讲究的，一般设置要 >= ribbon的超时时间值
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000 # 设置API网关路由转发请求的HystrixCommand执行超时时间，单位为毫秒（默认值1000）。断路器的超时时间大于ribbon的超时时间，才会触发重试
