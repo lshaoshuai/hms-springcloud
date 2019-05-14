@@ -25,13 +25,13 @@ public class RoomServiceApplication {
          * 【启动步骤就是，需要运行两次main方法，分别输入不同的端口号，与机器上不冲突即可；这样就实现了2个服务提供者的高可用服务了】
          */
 
-        System.out.println("================================================== 开始启动 user 服务 =============================================================");
-        System.out.println("请在控制台指定user服务的端口号 —— [端口号随意指定，注意不要与本机端口号出现冲突即可]");
-        Scanner scanner = new Scanner(System.in);
-        String port = scanner.nextLine(); //让用户指定端口号
-        new SpringApplicationBuilder(RoomServiceApplication.class).properties("server.port="+ port).run(args);//启动项目
+        System.out.println("================================================== 开始启动 room 服务 =============================================================");
+//        System.out.println("请在控制台指定user服务的端口号 —— [端口号随意指定，注意不要与本机端口号出现冲突即可]");
+//        Scanner scanner = new Scanner(System.in);
+//        String port = scanner.nextLine(); //让用户指定端口号
+        new SpringApplicationBuilder(RoomServiceApplication.class).run(args);//启动项目
 
-        System.out.println("================================================== user服务启动成功 =============================================================");
+        System.out.println("================================================== room服务启动成功 =============================================================");
     }
 
 }

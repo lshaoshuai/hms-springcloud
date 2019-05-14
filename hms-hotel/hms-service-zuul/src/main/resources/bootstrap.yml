@@ -15,7 +15,6 @@ spring:
         enabled: true
       name: service-zuul #文件名前缀名称
       profile: dev
-      uri: http://127.0.0.1:11113
 
 management:
   security:
