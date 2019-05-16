@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <modules>
+        <module>hms-server-eureka</module>
+        <module>hms-server-config</module>
+        <module>hms-service-zuul</module>
+        <module>hms-web-hystrix-dashboard</module>
+        <module>hms-server-room</module>
+        <module>hms-provider-rms</module>
+    </modules>
+
+    <!-- 父项目依赖 -->
+    <parent>
+        <groupId>com.luo</groupId>
+        <artifactId>hms-springcloud</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <!-- 项目模块 -->
+    <groupId>com.luo</groupId>
+    <artifactId>hms-provider</artifactId>
+    <packaging>pom</packaging>
+
+</project>

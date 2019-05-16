@@ -9,9 +9,83 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
 
+    <developers>
+        <developer>
+            <name>lshao</name>
+            <url>https://github.com/lshaoshuai/hms-springcloud</url>
+            <email>1939125539@qq.com</email>
+        </developer>
+    </developers>
+
     <modules>
-        <module>hms-hotel</module>
+        <module>hms-provider</module>
+        <module>hms-common</module>
+        <module>hms-provider-api</module>
     </modules>
 
+    <!-- 项目介绍 -->
+    <name>hms-springcloud</name>
+    <description>一个基于微服务环境的分布式酒店管理系统； 采用现如今最流行的 springcloud 框架进行快速开发部署。</description>
+    <url>http://www.2b2b92b.com</url>
+
+    <!-- 版本声明 -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
+        <java.version>1.8</java.version>
+
+        <spring.boot.version>1.5.9.RELEASE</spring.boot.version>
+        <spring.cloud.version>Dalston.SR4</spring.cloud.version>
+        <eureka.starter.version>1.4.2.RELEASE</eureka.starter.version>
+    </properties>
+
+    <!-- 此项配置的意思是：pom.xml中的parent引用，可以引用我们自己项目的parent，而不是 c的parent。方便项目模块的扩展和管理。必须配置在dependencyManagement节点中 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!--项目构建配置-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <failOnError>true</failOnError>
+                    <verbose>true</verbose>
+                    <fork>true</fork>
+                    <compilerArgument>-nowarn</compilerArgument>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+            <!-- 设置maven打包的时候跳过junit测试 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.18.1</version>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

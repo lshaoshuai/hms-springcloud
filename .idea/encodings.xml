@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" addBOMForNewFiles="with NO BOM">
-    <file url="file://$PROJECT_DIR$/hms-hotel" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/hms-hotel/hms-server-config" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/hms-hotel/hms-server-eureka" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/hms-hotel/hms-server-room" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/hms-hotel/hms-service-zuul" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/hms-hotel/hms-web-hystrix-dashboard" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hms-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hms-common/hms-common-base" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hms-common/hms-common-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hms-common/hms-common-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hms-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hms-provider-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hms-provider-api/hsm-provider-rms-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hms-provider/hms-provider-rms" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hms-provider/hms-server-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hms-provider/hms-server-eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hms-provider/hms-server-room" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hms-provider/hms-service-zuul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hms-provider/hms-web-hystrix-dashboard" charset="UTF-8" />
   </component>
 </project>
