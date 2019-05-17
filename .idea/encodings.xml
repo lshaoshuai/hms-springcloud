@@ -6,6 +6,8 @@
     <file url="file://$PROJECT_DIR$/hms-common/hms-common-base" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hms-common/hms-common-core" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hms-common/hms-common-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hms-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hms-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hms-provider" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hms-provider-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hms-provider-api/hsm-provider-rms-api" charset="UTF-8" />
@@ -15,5 +17,6 @@
     <file url="file://$PROJECT_DIR$/hms-provider/hms-server-room" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hms-provider/hms-service-zuul" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hms-provider/hms-web-hystrix-dashboard" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hms-zuul" charset="UTF-8" />
   </component>
 </project>

@@ -8,27 +8,35 @@
         <outputRelativeToContentRoot value="true" />
         <module name="hms-common-core" />
         <module name="hms-common-util" />
+        <module name="hms-config" />
+        <module name="hms-eureka" />
         <module name="hms-provider-rms" />
-        <module name="hms-server-config" />
-        <module name="hms-server-eureka" />
         <module name="hms-server-room" />
-        <module name="hms-service-zuul" />
         <module name="hms-web-hystrix-dash-board" />
+        <module name="hms-zuul" />
         <module name="hsm-provider-rms-api" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="hms-server-config" target="1.8" />
+      <module name="hms-server-eureka" target="1.5" />
+      <module name="hms-service-zuul" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="hms-common-base" options="" />
       <module name="hms-common-core" options="-nowarn" />
       <module name="hms-common-util" options="-nowarn" />
+      <module name="hms-config" options="-nowarn" />
+      <module name="hms-eureka" options="-nowarn" />
       <module name="hms-provider-rms" options="-nowarn" />
       <module name="hms-server-config" options="-nowarn" />
       <module name="hms-server-eureka" options="-nowarn" />
       <module name="hms-server-room" options="-nowarn" />
       <module name="hms-service-zuul" options="-nowarn" />
       <module name="hms-web-hystrix-dash-board" options="-nowarn" />
+      <module name="hms-zuul" options="-nowarn" />
       <module name="hsm-provider-rms-api" options="-nowarn" />
     </option>
   </component>

@@ -21,6 +21,9 @@
         <module>hms-provider</module>
         <module>hms-common</module>
         <module>hms-provider-api</module>
+        <module>hms-config</module>
+        <module>hms-eureka</module>
+        <module>hms-zuul</module>
     </modules>
 
     <!-- 项目介绍 -->

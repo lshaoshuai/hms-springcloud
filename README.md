@@ -24,4 +24,4 @@
 
 下载Redis
 
-下载[MQ](https://www.rabbitmq.com/)
+下载[MQ](https://www.rabbitmq.com/)   
