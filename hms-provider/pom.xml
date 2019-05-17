@@ -6,12 +6,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <modules>
-        <module>hms-server-eureka</module>
-        <module>hms-server-config</module>
-        <module>hms-service-zuul</module>
         <module>hms-web-hystrix-dashboard</module>
         <module>hms-server-room</module>
         <module>hms-provider-rms</module>
+        <module>hms-provider-ums</module>
     </modules>
 
     <!-- 父项目依赖 -->

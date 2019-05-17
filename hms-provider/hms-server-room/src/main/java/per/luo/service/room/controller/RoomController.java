@@ -18,6 +18,7 @@ public class RoomController {
 
     @RequestMapping(value = "/room/{id}",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
     public Room findByRoonNum(@PathVariable long id){
+
         Room room = new Room();
         room.setId(1);
         room.setIs_usage(1);

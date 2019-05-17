@@ -1,5 +1,6 @@
 package com.hms.provider.controller;
 
+import com.hms.annotation.NoNeedAccessAuthentication;
 import com.hms.core.support.BaseController;
 import com.hms.provider.service.RmsOrderService;
 import com.hms.vo.RoomVo;
@@ -38,13 +39,12 @@ public class RmsOrderController extends BaseController {
      */
     @PostMapping("roomdetail/{roomNo}")
     @ApiOperation(httpMethod = "POST", value = "查询订单详情")
+    @NoNeedAccessAuthentication()
     public Wrapper queryUserOrderDetailList(@PathVariable String roomNo) {
 
         logger.info("queryUserOrderDetailList - 查询用户订单明细. orderNo={}", roomNo);
-
-        //Long userId = getLoginAuthDto().getUserId();
-
-        //logger.info("操作人信息. userId={}", userId);
+        Long userId = getLoginAuthDto().getUserId();
+        logger.info("操作人信息. userId={}", userId);
 
         RoomVo roomvo = rmsOrderService.getRoomDetail(roomNo);
         return WrapMapper.ok(roomvo);

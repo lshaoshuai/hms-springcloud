@@ -9,10 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- 项目模块 -->
-    <groupId>com.luo</groupId>
     <artifactId>hms-common-base</artifactId>
-    <packaging>pom</packaging>
 
     <dependencies>
         <dependency>
