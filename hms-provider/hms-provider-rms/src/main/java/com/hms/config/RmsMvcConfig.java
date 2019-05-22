@@ -1,8 +1,6 @@
 package com.hms.config;
 
 import com.hms.core.interceptor.TokenInterceptor;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -15,8 +13,8 @@ import javax.annotation.Resource;
  * @projectname HMS
  * @github https://github.com/lshaoshuai/hms-springcloud
  */
-@Configuration
-@EnableWebMvc
+//@Configuration
+//@EnableWebMvc
 public class RmsMvcConfig extends WebMvcConfigurerAdapter {
 
     @Resource

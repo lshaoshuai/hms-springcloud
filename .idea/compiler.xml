@@ -14,8 +14,6 @@
         <module name="hms-provider-rms" />
         <module name="hms-provider-ums" />
         <module name="hms-provider-ums-api" />
-        <module name="hms-server-room" />
-        <module name="hms-web-hystrix-dash-board" />
         <module name="hms-zuul" />
         <module name="hsm-provider-rms-api" />
       </profile>
@@ -23,7 +21,9 @@
     <bytecodeTargetLevel>
       <module name="hms-server-config" target="1.8" />
       <module name="hms-server-eureka" target="1.5" />
+      <module name="hms-server-room" target="1.8" />
       <module name="hms-service-zuul" target="1.5" />
+      <module name="hms-web-hystrix-dash-board" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

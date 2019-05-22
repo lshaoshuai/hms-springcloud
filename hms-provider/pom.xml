@@ -6,8 +6,6 @@
     <modelVersion>4.0.0</modelVersion>
 
     <modules>
-        <module>hms-web-hystrix-dashboard</module>
-        <module>hms-server-room</module>
         <module>hms-provider-rms</module>
         <module>hms-provider-ums</module>
     </modules>
@@ -23,5 +21,24 @@
     <groupId>com.luo</groupId>
     <artifactId>hms-provider</artifactId>
     <packaging>pom</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.luo</groupId>
+            <artifactId>hms-common-util</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.luo</groupId>
+            <artifactId>hms-common-base</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.luo</groupId>
+            <artifactId>hms-common-core</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+    </dependencies>
 
 </project>

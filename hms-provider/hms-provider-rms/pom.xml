@@ -24,21 +24,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>com.luo</groupId>
-            <artifactId>hms-common-util</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.luo</groupId>
-            <artifactId>hms-common-base</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.luo</groupId>
-            <artifactId>hms-common-core</artifactId>
-            <version>1.0.0</version>
-        </dependency>
 
         <!-- maybatis-spring的依赖，不知道对不对，spring-boot是1.5.。9 但是它里面的spring-boot依赖是1.5.2 -->
         <dependency>
@@ -71,11 +56,6 @@
         </dependency>
 
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-client</artifactId>
         </dependency>
@@ -86,13 +66,6 @@
             <artifactId>druid</artifactId>
             <version>1.0.5</version>
         </dependency>
-
-        <dependency>
-            <groupId>io.swagger</groupId>
-            <artifactId>swagger-annotations</artifactId>
-            <version>1.5.13</version>
-        </dependency>
-
     </dependencies>
 
 

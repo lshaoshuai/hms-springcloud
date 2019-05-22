@@ -11,7 +11,9 @@
       <set>
         <option value="$PROJECT_DIR$/hms-provider/hms-server-config/pom.xml" />
         <option value="$PROJECT_DIR$/hms-provider/hms-server-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/hms-provider/hms-server-room/pom.xml" />
         <option value="$PROJECT_DIR$/hms-provider/hms-service-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/hms-provider/hms-web-hystrix-dashboard/pom.xml" />
       </set>
     </option>
   </component>

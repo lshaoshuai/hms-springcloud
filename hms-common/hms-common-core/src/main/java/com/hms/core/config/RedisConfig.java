@@ -29,7 +29,7 @@ public class RedisConfig extends CachingConfigurerSupport {
     public RedisTemplate<String,Object> redisTemplate(RedisConnectionFactory redisConnectionFactory){
 
         log.info("------------------------------------------");
-        log.info("-----------------local redis--------------");
+        log.info("-----------------LOCAL REDIS--------------");
         log.info("------------------------------------------");
 
         RedisTemplate<String,Object> template = new RedisTemplate<>();
