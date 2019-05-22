@@ -31,9 +31,9 @@ git clone git@github.com:lshaoshuai/hms-springcloud.git
 
 使用idea下载Lombok插件
 
-下载Redis:[windows版本redis](https://github.com/microsoftarchive/redis/releases)
+- 下载Redis:[windows版本redis](https://github.com/microsoftarchive/redis/releases)
 
-下载RabitMq:[MQ](https://www.rabbitmq.com/)   
+- 下载RabitMq:[MQ](https://www.rabbitmq.com/)   
 
 ## springcloud参考文档
 
