@@ -25,3 +25,15 @@
 下载Redis
 
 下载[MQ](https://www.rabbitmq.com/)   
+
+## swagger
+
+Swagger 是一个规范和完整的框架，用于生成、描述、调用和可视化 RESTful 风格的 Web 服务。总体目标是使客户端和文件系统作为服务器以同样的速度来更新。文件的方法，参数和模型紧密集成到服务器端的代码，允许API来始终保持同步。
+
+### 作用：
+
+- 接口的文档在线自动生成。
+
+- 功能测试。
+
+![首页](https://raw.githubusercontent.com/lshaoshuai/springcloud-config/master/images/swagger1.png)
