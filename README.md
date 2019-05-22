@@ -22,15 +22,21 @@
 将项目从github上clone到本地
 
 ```
-git clone git://github.com/schacon/grit.git
+git clone git@github.com:lshaoshuai/hms-springcloud.git
+
+或者直接在项目下载zip文件
 ```
 - idea破解版教程：https://blog.csdn.net/yl1712725180/article/details/80309862
 
 使用idea下载Lombok插件
 
-下载Redis
+下载Redis:[windows版本redis](https://github.com/microsoftarchive/redis/releases)
 
-下载[MQ](https://www.rabbitmq.com/)   
+下载RabitMq:[MQ](https://www.rabbitmq.com/)   
+
+## springcloud参考文档
+
+springboot api-doc:https://spring.io/projects/spring-boot/
 
 ## swagger
 
