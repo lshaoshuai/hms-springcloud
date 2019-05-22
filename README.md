@@ -17,8 +17,14 @@
 - 仿美图酒店app：https://github.com/lshaoshuai/flutter_meituan_hotel
 
 
+- git 下载地址: https://git-scm.com/downloads
 
 将项目从github上clone到本地
+
+```
+git clone git://github.com/schacon/grit.git
+```
+- idea破解版教程：https://blog.csdn.net/yl1712725180/article/details/80309862
 
 使用idea下载Lombok插件
 
