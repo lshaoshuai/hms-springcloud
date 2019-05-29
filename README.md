@@ -28,6 +28,7 @@ git clone git@github.com:lshaoshuai/hms-springcloud.git
 或者直接在项目下载zip文件
 ```
 - idea破解版教程：https://blog.csdn.net/yl1712725180/article/details/80309862
+- idea破解jar包: https://github.com/lshaoshuai/springcloud-config/tree/master/ideajar
 
 使用idea下载Lombok插件
 
