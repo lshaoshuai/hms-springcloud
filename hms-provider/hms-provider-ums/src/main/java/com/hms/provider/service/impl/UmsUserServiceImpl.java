@@ -57,7 +57,8 @@ public class UmsUserServiceImpl extends BaseService<UserVo> implements UmsUserSe
 
 
         UmsTokenDto userTokenDto= new UmsTokenDto();
-        userTokenDto.setPhone_num(codedto.getPhone_num());
+        userTokenDto.setId(1);
+        userTokenDto.setPhone_num(String.valueOf(codedto.getPhone_num()));
         userTokenDto.setUser_name(RadomUtil.createRadomUserName());
         userTokenDto.setUser_token(token);
         userTokenDao.insertUserinfo(userTokenDto);

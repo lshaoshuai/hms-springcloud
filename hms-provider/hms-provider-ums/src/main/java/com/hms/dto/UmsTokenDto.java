@@ -13,9 +13,9 @@ import lombok.Data;
 @ApiModel(value = "UmsTokenDto")
 public class UmsTokenDto {
 
-    private long id;
+    private int id;
 
-    private long phone_num;
+    private String phone_num;
 
     private String user_name;
 

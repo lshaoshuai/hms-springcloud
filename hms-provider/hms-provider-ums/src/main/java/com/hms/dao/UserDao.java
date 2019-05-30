@@ -1,7 +1,6 @@
 package com.hms.dao;
 
 import com.hms.vo.UserVo;
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
@@ -12,7 +11,7 @@ import org.apache.ibatis.annotations.Update;
  * @projectname HMS
  * @github https://github.com/lshaoshuai/hms-springcloud
  */
-@Mapper
+
 public interface UserDao {
 
     @Select("select * from user where phone_num = #{phone_num}")

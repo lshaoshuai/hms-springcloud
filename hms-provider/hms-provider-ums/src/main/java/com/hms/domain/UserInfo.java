@@ -19,14 +19,13 @@ public class UserInfo {
     @GeneratedValue
     private Integer id;
 
-
-    @Column(length = 20)
+    @Column(length = 100)
     private String phone_num;
 
-    @Column(length = 20)
+    @Column(length = 255)
     private String user_name;
 
-    @Column(length = 20)
+    @Column(length = 255)
     private String user_token;
 
 }
