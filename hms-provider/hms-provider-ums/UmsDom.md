@@ -43,3 +43,5 @@ resources: 资源文件
     bootstrap.yml 可以理解成系统级别的一些参数配置，这些参数一般是不会变动的。
     application.yml 可以用来定义应用级别的，如果搭配 spring-cloud-config 使用 application.yml 里面定义的文件可以实现动态替换。
 
+
+
