@@ -8,6 +8,7 @@
     <modules>
         <module>hms-provider-rms</module>
         <module>hms-provider-ums</module>
+        <module>hms-provider-oms</module>
     </modules>
 
     <!-- 父项目依赖 -->

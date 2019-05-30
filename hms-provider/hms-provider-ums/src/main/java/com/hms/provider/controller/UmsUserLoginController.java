@@ -1,8 +1,8 @@
 package com.hms.provider.controller;
 
 import com.hms.core.support.BaseController;
+import com.hms.dto.CodeDto;
 import com.hms.provider.service.UmsUserService;
-import com.hms.vo.CodeVo;
 import com.hms.vo.UserVo;
 import com.hms.wrapper.WrapMapper;
 import com.hms.wrapper.Wrapper;
@@ -46,9 +46,9 @@ public class UmsUserLoginController extends BaseController {
 
     @PostMapping("/checkcode")
     @ApiOperation(httpMethod = "POST", value = "校验验证码")
-    public Wrapper checkVerifyCode(@RequestBody CodeVo codeVo) {
-        logger.info("获取用户请求验证码TOKEN. token={}" ,codeVo);
-        String token = umsUserService.createUserToken(codeVo);
+    public Wrapper checkVerifyCode(@RequestBody CodeDto codedto) {
+        logger.info("获取用户请求验证码TOKEN. token={}" ,codedto);
+        String token = umsUserService.createUserToken(codedto);
         return WrapMapper.ok(token);
     }
 

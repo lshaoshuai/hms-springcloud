@@ -1,7 +1,10 @@
 package com.hms.dao;
 
 import com.hms.vo.UserVo;
-import org.apache.ibatis.annotations.*;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 /**
  * @author luoshao
@@ -19,6 +22,5 @@ public interface UserDao {
     @Update("update room set is_usage = 2 where id = 1")
     public void update(UserVo toBeUpdate);
 
-    @Insert("insert into user (id, phone_num, username) values(#{id}, #{phone_num}, #{username})")
-    public void insertUserinfo(UserVo user);
+
 }

@@ -25,7 +25,6 @@
             <version>3.4.0</version>
         </dependency>
 
-
         <!-- maybatis-spring的依赖，不知道对不对，spring-boot是1.5.。9 但是它里面的spring-boot依赖是1.5.2 -->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
@@ -71,6 +70,16 @@
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>1.0.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
     </dependencies>

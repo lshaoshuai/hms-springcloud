@@ -55,7 +55,7 @@ public class SwaggerConfiguration {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title(swaggertitle)
-                .description("用户api接口文档")
+                .description("API接口文档")
                 .contact(new Contact("luo", "https://github.com/lshaoshuai/hms-springcloud", ""))
                 .version("1.0")
                 .license(license)

@@ -2,76 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5347c9a2-c816-4b5b-918a-a339f15257f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/config/SwaggerConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/config/UmsMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/mq/config/SenderConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/controller/UmsUserLoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/service/RedisService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/service/UmsUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/service/impl/RedisServiceimpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/service/impl/UmsUserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/util/JwtToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/util/MD5Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/vo/CodeVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/vo/InteriorUserVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/test/java/MQTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hms-provider/hms-provider-oms/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hms-provider/hms-provider-rms/src/main/java/com/hms/vo/RoomDetailVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/dao/UserTokenDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/domain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/domain/UserInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/dto/CodeDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/dto/UmsTokenDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/util/RadomUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/vo/UserTokenVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-common/hms-common-base/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hms-common/hms-common-base/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-common/hms-common-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hms-common/hms-common-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/config/CoreConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/config/CoreConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/config/RedisConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/interceptor/TokenInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/interceptor/TokenInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-common/hms-common-core/target/classes/com/hms/core/interceptor/TokenInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/hms-common/hms-common-core/target/classes/com/hms/core/interceptor/TokenInterceptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-common/hms-common-util/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hms-common/hms-common-util/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-common/hms-common-util/src/main/java/com/hms/RedisKeyUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/hms-common/hms-common-util/src/main/java/com/hms/RedisKeyUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hms-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-rms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-rms/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hms-common/hms-common-base/src/main/java/com/hms/base/dto/UserTokenDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/hms-common/hms-common-base/src/main/java/com/hms/base/dto/UserTokenDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hms-common/hms-common-base/target/classes/com/hms/base/dto/UserTokenDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/hms-common/hms-common-base/target/classes/com/hms/base/dto/UserTokenDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/config/SwaggerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/config/SwaggerConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hms-common/hms-common-core/target/classes/com/hms/core/config/SwaggerConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/hms-common/hms-common-core/target/classes/com/hms/core/config/SwaggerConfiguration.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-rms/src/main/java/com/hms/RoomServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-rms/src/main/java/com/hms/RoomServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-rms/src/main/java/com/hms/config/RmsMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-rms/src/main/java/com/hms/config/RmsMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-rms/target/classes/com/hms/RoomServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-rms/target/classes/com/hms/RoomServiceApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-rms/src/main/java/com/hms/vo/RoomVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-rms/src/main/java/com/hms/vo/RoomVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-ums/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/hms-server-room.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/src/main/java/per/luo/service/room/RoomServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/UmsServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/src/main/java/per/luo/service/room/config/DataSourceConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/src/main/java/per/luo/service/room/config/DruidConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/src/main/java/per/luo/service/room/controller/RoomController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/src/main/java/per/luo/service/room/dao/RoomDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/src/main/java/per/luo/service/room/rabbitmq/RabbitConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/src/main/java/per/luo/service/room/redis/RedisConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/src/main/java/per/luo/service/room/redis/RedisService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/src/main/java/per/luo/service/room/service/RoomService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/src/main/java/per/luo/service/room/vo/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/vo/UserVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/src/main/resources/datasource.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/src/test/java/DaoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/src/test/java/DbController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/src/test/java/RedisTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/src/test/java/TestMyBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/target/classes/META-INF/hms-server-room.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/target/classes/bootstrap.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/target/classes/datasource.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/target/classes/per/luo/service/room/RoomServiceApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/target/classes/per/luo/service/room/config/DataSourceConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/target/classes/per/luo/service/room/config/DruidConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/target/classes/per/luo/service/room/controller/RoomController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/target/classes/per/luo/service/room/dao/RoomDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/target/classes/per/luo/service/room/rabbitmq/RabbitConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/target/classes/per/luo/service/room/redis/RedisConfig$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/target/classes/per/luo/service/room/redis/RedisConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/target/classes/per/luo/service/room/redis/RedisService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/target/classes/per/luo/service/room/service/RoomService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/target/classes/per/luo/service/room/vo/Room.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/target/test-classes/DaoTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/target/test-classes/DbController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/target/test-classes/RedisTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-server-room/target/test-classes/TestMyBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-web-hystrix-dashboard/hms-web-hystrix-dash-board.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hms-provider/hms-web-hystrix-dashboard/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/mq/config/SenderConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/mq/config/SenderConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/controller/UmsUserLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/controller/UmsUserLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/service/UmsUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/service/UmsUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/service/impl/UmsUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/service/impl/UmsUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/util/JwtToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/util/JwtToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/vo/CodeVo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/vo/UserVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/vo/UserVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-ums/target/classes/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/target/classes/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-ums/target/classes/com/hms/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/target/classes/com/hms/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-ums/target/classes/com/hms/mq/config/SenderConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/target/classes/com/hms/mq/config/SenderConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-ums/target/classes/com/hms/provider/controller/UmsUserLoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/target/classes/com/hms/provider/controller/UmsUserLoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-ums/target/classes/com/hms/provider/service/UmsUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/target/classes/com/hms/provider/service/UmsUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-ums/target/classes/com/hms/provider/service/impl/UmsUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/target/classes/com/hms/provider/service/impl/UmsUserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-ums/target/classes/com/hms/util/JwtToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/target/classes/com/hms/util/JwtToken.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-ums/target/classes/com/hms/vo/CodeVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hms-provider/hms-provider-ums/target/classes/com/hms/vo/UserVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/hms-provider-ums/target/classes/com/hms/vo/UserVo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hms-provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hms-provider/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -99,6 +68,7 @@
     <ignored path="$PROJECT_DIR$/hms-zuul/target/" />
     <ignored path="$PROJECT_DIR$/hms-provider-api/hms-provider-ums-api/target/" />
     <ignored path="$PROJECT_DIR$/hms-provider/hms-provider-ums/target/" />
+    <ignored path="$PROJECT_DIR$/hms-provider/hms-provider-oms/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/service/impl/UmsUserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+            <state relative-caret-position="141">
+              <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -137,31 +107,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hms-common/hms-common-util/src/main/java/com/hms/RedisKeyUtil.java">
+        <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/util/RadomUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="21" column="75" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
+            <state relative-caret-position="190">
+              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/service/UmsUserService.java">
+        <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="310">
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/controller/UmsUserLoginController.java">
+        <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/resources/bootstrap.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="54" column="7" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="7" />
+            <state relative-caret-position="158">
+              <caret line="44" column="4" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/domain/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="41">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -170,10 +146,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/vo/CodeVo.java">
+        <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/domain/UserInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+            <state relative-caret-position="117">
+              <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/dao/UserDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/dao/UserTokenDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/dto/CodeDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="307">
+              <caret line="35" column="22" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -206,22 +215,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/hms-eureka/src/main/java/com/hms/eureka/HmsEurekaServer.java" />
-        <option value="$PROJECT_DIR$/hms-zuul/pom.xml" />
-        <option value="$PROJECT_DIR$/hms-zuul/src/main/java/com/hms/zuul/ZuulApplication.java" />
-        <option value="$PROJECT_DIR$/hms-zuul/src/main/java/com/hms/zuul/HmsZuulApplication.java" />
-        <option value="$PROJECT_DIR$/hms-zuul/src/main/java/com/hms/zuul/filter/ZuulFilter.java" />
-        <option value="$PROJECT_DIR$/hms-provider/hms-server-room/pom.xml" />
-        <option value="$PROJECT_DIR$/hms-provider/hms-provider-rms/src/main/java/com/hms/provider/service/impl/RmsOrderServiceImpl.java" />
-        <option value="$PROJECT_DIR$/hms-provider/hms-server-room/src/main/java/per/luo/service/room/controller/RoomController.java" />
-        <option value="$PROJECT_DIR$/hms-common/hms-common-core/src/main/resources/META-INF/spring.factories" />
-        <option value="$PROJECT_DIR$/hms-provider/hms-provider-rms/src/main/resources/META-INF/application.yml" />
-        <option value="$PROJECT_DIR$/hms-provider/hms-provider-rms/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/hms-provider/hms-provider-rms/src/main/java/com/hms/provider/controller/RmsOrderController.java" />
-        <option value="$PROJECT_DIR$/hms-provider/hms-provider-rms/src/main/java/com/hms/RoomServiceApplication.java" />
         <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/controller/UmsUserLoginController.java" />
         <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/dao/RoomDao.java" />
-        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/service/impl/UmsUserService.java" />
         <option value="$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/interceptor/TokenInterceptor.java" />
         <option value="$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/config/RedisConfig.java" />
@@ -229,42 +225,61 @@
         <option value="$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/config/CoreConfiguration.java" />
         <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/UserServiceApplication.java" />
         <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/mq/listener/UacPushMessageListener.java" />
-        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/mq/config/SenderConfig.java" />
         <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/test/java/MQTest.java" />
         <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/util/MD5Util.java" />
-        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/vo/UserVo.java" />
-        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/resources/bootstrap.yml" />
         <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/config/SwaggerConfig.java" />
         <option value="$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/config/SwaggerConfig.java" />
         <option value="$PROJECT_DIR$/hms-common/hms-common-base/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/hms-common/hms-common-core/pom.xml" />
-        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/pom.xml" />
         <option value="$PROJECT_DIR$/hms-provider/hms-provider-rms/pom.xml" />
         <option value="$PROJECT_DIR$/hms-common/pom.xml" />
         <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/config/SwaggerConfiguration.java" />
         <option value="$PROJECT_DIR$/hms-common/hms-common-util/pom.xml" />
         <option value="$PROJECT_DIR$/hms-common/hms-common-util/src/main/java/com/hms/wrapper/Wrapper.java" />
         <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/UmsServiceApplication.java" />
-        <option value="$PROJECT_DIR$/hms-provider/pom.xml" />
-        <option value="$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/config/SwaggerConfiguration.java" />
         <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/config/UmsMvcConfig.java" />
-        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/service/UmsUserService.java" />
-        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/util/JwtToken.java" />
         <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/service/RedisService.java" />
         <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/service/impl/RedisServiceimpl.java" />
         <option value="$PROJECT_DIR$/hms-common/hms-common-util/src/main/java/com/hms/RedisKeyUtil.java" />
-        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/controller/UmsUserLoginController.java" />
         <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/vo/CodeVo.java" />
+        <option value="$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/config/SwaggerConfiguration.java" />
+        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/mq/config/SenderConfig.java" />
+        <option value="$PROJECT_DIR$/hms-provider/hms-provider-rms/src/main/java/com/hms/vo/RoomDetailVo.java" />
+        <option value="$PROJECT_DIR$/hms-provider/hms-provider-rms/src/main/java/com/hms/vo/RoomVo.java" />
+        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/dto/CodeDto.java" />
+        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/vo/UserVo.java" />
+        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/controller/UmsUserLoginController.java" />
+        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/service/UmsUserService.java" />
+        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/util/JwtToken.java" />
+        <option value="$PROJECT_DIR$/hms-provider/hms-provider-rms/src/main/java/com/hms/RoomServiceApplication.java" />
+        <option value="$PROJECT_DIR$/hms-common/hms-common-base/src/main/java/com/hms/base/dto/UserTokenDto.java" />
+        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/vo/UserTokenVo.java" />
+        <option value="$PROJECT_DIR$/hms-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/dto/UserTokenDto.java" />
+        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/dto/UmsTokenDto.java" />
+        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/pom.xml" />
+        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/util/RadomUtil.java" />
+        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/resources/bootstrap.yml" />
         <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/service/impl/UmsUserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/dao/UserTokenDao.java" />
+        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/domain/UserInfo.java" />
+        <option value="$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/domain/User.java" />
       </list>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1298" />
-    <option name="height" value="698" />
+    <option name="x" value="-390" />
+    <option name="y" value="390" />
+    <option name="width" value="1615" />
+    <option name="height" value="880" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -275,7 +290,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -286,7 +300,197 @@
             <path>
               <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-common" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-common-base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-common" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-common-base" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-common" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-common-base" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-common" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-common-base" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-common" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-common-base" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-common" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-common-base" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
               <item name="hms-provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider-oms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider-oms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider-oms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider-rms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider-rms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider-rms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider-rms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider-rms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider-rms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hms" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider-rms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hms" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider-rms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hms" type="462c0819:PsiDirectoryNode" />
+              <item name="provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider-rms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hms" type="462c0819:PsiDirectoryNode" />
+              <item name="provider" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider-rms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hms" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider-rms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider-rms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
@@ -337,6 +541,62 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="hms" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider-ums" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hms" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider-ums" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hms" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider-ums" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hms" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider-ums" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hms" type="462c0819:PsiDirectoryNode" />
+              <item name="mq" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider-ums" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hms" type="462c0819:PsiDirectoryNode" />
+              <item name="mq" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -420,13 +680,87 @@
             </path>
             <path>
               <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider-ums" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-provider-ums" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hms-spring-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="hms-zuul" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="hms-spring-cloud" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="hms-provider" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="hms-provider" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="hms-provider-ums" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="hms-provider" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="hms-provider-ums" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="hms-provider" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="hms-provider-ums" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="hms-provider" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="hms-provider-ums" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="hms-spring-cloud" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="hms-provider" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="hms-provider-ums" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com.hms" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -440,14 +774,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558415591473" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../paascloud-master" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559227816486" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../githubproject/JavaSort-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="spring" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="show.run.dashboard.notification" value="false" />
   </component>
@@ -595,6 +930,16 @@
       <workItem from="1558317578471" duration="5976000" />
       <workItem from="1558338073562" duration="14837000" />
       <workItem from="1558404095984" duration="9349000" />
+      <workItem from="1558508570322" duration="3925000" />
+      <workItem from="1558748343053" duration="14070000" />
+      <workItem from="1558800283938" duration="767000" />
+      <workItem from="1558839573882" duration="3662000" />
+      <workItem from="1558857554592" duration="1411000" />
+      <workItem from="1558915487040" duration="1707000" />
+      <workItem from="1558929303540" duration="3625000" />
+      <workItem from="1559118898481" duration="4445000" />
+      <workItem from="1559184758030" duration="609000" />
+      <workItem from="1559189496285" duration="9322000" />
     </task>
     <task id="LOCAL-00001" summary="update service-room-dev.yml">
       <created>1557828443659</created>
@@ -661,7 +1006,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131889000" />
+    <option name="totallyTimeSpent" value="175432000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -674,8 +1019,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.26340482" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.24329759" />
       <window_info id="Structure" order="1" sideWeight="0.5021097" side_tool="true" weight="0.25938338" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -685,24 +1031,24 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.359944" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.70963174" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.35977337" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.35977337" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.33002833" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.28328612" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32719547" />
       <window_info anchor="bottom" id="Spring" order="9" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067025" side_tool="true" weight="0.45609066" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.36260623" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.3611898" />
       <window_info anchor="bottom" id="Flutter Performance" order="15" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.3297587" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Flutter Inspector" order="6" />
@@ -735,14 +1081,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/interceptor/TokenInterceptor.java</url>
-          <line>85</line>
-          <properties class="com.hms.core.interceptor.TokenInterceptor" method="preHandle">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/test/java/MQTest.java</url>
           <line>22</line>
           <properties class="MQTest" method="testRabbit">
@@ -750,345 +1088,15 @@
           </properties>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/UmsServiceApplication.java</url>
-          <line>7</line>
-          <properties />
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.13.RELEASE/spring-context-4.3.13.RELEASE.jar!/org/springframework/context/annotation/Configuration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/config/SwaggerConfig.java" />
-    <entry file="file://$PROJECT_DIR$/hms-config/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/config/RedisConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="45" column="55" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/support/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/support/BaseService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-common/hms-common-base/src/main/java/com/hms/base/dto/LoginAuthDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-common/hms-common-base/src/main/java/com/hms/base/dto/UserTokenDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-provider/hms-server-room/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/config/SwaggerConfiguration.java" />
-    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/config/CoreConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-common/hms-common-base/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-common/hms-common-util/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-common/hms-common-core/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1031">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-eureka/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-config/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-665" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1031">
-          <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-rms/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-zuul/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-provider/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-437">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-provider-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/swagger/swagger-annotations/1.5.14/swagger-annotations-1.5.14.jar!/io/swagger/annotations/ApiOperation.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-209">
-          <caret line="70" column="11" lean-forward="true" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/swagger/swagger-annotations/1.5.14/swagger-annotations-1.5.14.jar!/io/swagger/annotations/ApiImplicitParam.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/swagger/swagger-annotations/1.5.14/swagger-annotations-1.5.14.jar!/io/swagger/annotations/Api.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.13.RELEASE/spring-webmvc-4.3.13.RELEASE.jar!/org/springframework/web/servlet/config/annotation/ResourceHandlerRegistry.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="50" column="39" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.13.RELEASE/spring-webmvc-4.3.13.RELEASE.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurationSupport.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="75" column="13" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.13.RELEASE/spring-webmvc-4.3.13.RELEASE.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.13.RELEASE/spring-webmvc-4.3.13.RELEASE.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-common/hms-common-util/src/main/java/com/hms/wrapper/Wrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="97" column="4" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-common/hms-common-util/src/main/java/com/hms/wrapper/WrapMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="134" column="23" lean-forward="true" selection-start-line="134" selection-start-column="23" selection-end-line="134" selection-end-column="23" />
-          <folding>
-            <element signature="e#2796#2797#0" expanded="true" />
-            <element signature="e#2882#2883#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/config/UmsMvcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="51" column="11" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/vo/InteriorUserVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/config/SwaggerConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="47" column="85" selection-start-line="47" selection-start-column="85" selection-end-line="47" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/dto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/util/JwtToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/vo/UserVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/UmsServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/18.0/guava-18.0.jar!/com/google/common/base/Preconditions.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/dto.java" />
     <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/service/RedisService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/service/impl/RedisServiceimpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-227">
-          <caret line="82" column="28" lean-forward="true" selection-start-line="82" selection-start-column="28" selection-end-line="82" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/interceptor/TokenInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="106" column="97" lean-forward="true" selection-start-line="106" selection-start-column="93" selection-end-line="106" selection-end-column="110" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/vo/CodeVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/service/UmsUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hms-common/hms-common-util/src/main/java/com/hms/RedisKeyUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="21" column="75" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
         </state>
       </provider>
     </entry>
@@ -1099,23 +1107,381 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/service/impl/UmsUserServiceImpl.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-amqp/1.7.4.RELEASE/spring-amqp-1.7.4.RELEASE.jar!/org/springframework/amqp/core/Queue.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="-108">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.2.0.Final/mapstruct-1.2.0.Final.jar!/org/mapstruct/Qualifier.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/mq/config/SenderConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#750#751#0" expanded="true" />
+            <element signature="e#535#536#0" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.13.RELEASE/spring-context-4.3.13.RELEASE.jar!/org/springframework/context/annotation/Import.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/springfox/springfox-swagger2/2.8.0/springfox-swagger2-2.8.0.jar!/springfox/documentation/swagger2/configuration/Swagger2DocumentationConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/springfox/springfox-swagger2/2.8.0/springfox-swagger2-2.8.0.jar!/springfox/documentation/swagger2/annotations/EnableSwagger2.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/config/SwaggerConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="20" column="6" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="20" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-common/hms-common-util/src/main/java/com/hms/RedisKeyUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="21" column="75" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-common/hms-common-util/src/main/java/com/hms/wrapper/WrapMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1226">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="e#2796#2797#0" expanded="true" />
+            <element signature="e#2882#2883#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-rms/src/main/java/com/hms/vo/RoomDetailVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/io/Serializable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2755">
+          <caret line="168" column="17" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-rms/src/main/java/com/hms/vo/RoomVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-oms/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/vo/CodeVo.java" />
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/service/impl/RedisServiceimpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1330">
+          <caret line="70" column="11" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/controller/UmsUserLoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="54" column="7" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="7" />
+        <state relative-caret-position="117">
+          <caret line="46" column="22" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/18.0/guava-18.0.jar!/com/google/common/base/Preconditions.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/config/UmsMvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-434">
+          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/service/UmsUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/vo/InteriorUserVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/springfox/springfox-swagger2/2.8.0/springfox-swagger2-2.8.0.jar!/springfox/documentation/swagger2/mappers/ModelMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="40" column="11" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-rms/src/main/java/com/hms/config/RmsMvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/modelmapper/modelmapper/1.1.2/modelmapper-1.1.2.jar!/org/modelmapper/ModelMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="118" column="17" selection-start-line="118" selection-start-column="17" selection-end-line="118" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/vo/UserVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="17" selection-start-line="17" selection-end-line="17" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-rms/src/main/java/com/hms/RoomServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-common/hms-common-base/src/main/java/com/hms/base/dto/LoginAuthDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-common/hms-common-base/src/main/java/com/hms/base/dto/UserTokenDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="15" selection-start-line="15" selection-end-line="19" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-common/hms-common-core/src/main/java/com/hms/core/interceptor/TokenInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="106" column="64" selection-start-line="106" selection-start-column="64" selection-end-line="106" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/test/java/MQTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/dto/CodeDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="35" column="22" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/vo/UserTokenVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/dto/UmsTokenDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/util/MD5Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/util/JwtToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/util/RadomUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.5.9.RELEASE/spring-boot-autoconfigure-1.5.9.RELEASE.jar!/org/springframework/boot/autoconfigure/orm/jpa/JpaProperties.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1738">
+          <caret line="172" column="41" selection-start-line="172" selection-start-column="41" selection-end-line="172" selection-end-column="41" />
+          <folding>
+            <element signature="e#5974#5975#0" expanded="true" />
+            <element signature="e#6020#6021#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/provider/service/impl/UmsUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/dao/UserTokenDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/domain/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/domain/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/java/com/hms/UmsServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hms-provider/hms-provider-ums/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="44" column="4" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1171,7 +1537,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>hms-server-room</last-edited>
+          <last-edited>hms-common</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
