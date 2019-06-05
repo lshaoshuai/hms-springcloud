@@ -1,8 +1,8 @@
 package com.hms.provider.service;
 
 import com.hms.core.support.IService;
-import com.hms.dto.CodeDto;
-import com.hms.vo.UserVo;
+import com.hms.provider.dto.CodeDto;
+import com.hms.provider.vo.UserVo;
 
 /**
  * @author luoshao
@@ -16,7 +16,7 @@ public interface UmsUserService extends IService<UserVo> {
 
     String createUserToken(CodeDto codedto);
 
-    int createVerifyCode(long mobile);
+    int createVerifyCode(String mobile);
 
     boolean queryVerifyCode(long mobile);
 

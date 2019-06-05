@@ -11,6 +11,7 @@
         <module name="hms-common-util" />
         <module name="hms-config" />
         <module name="hms-eureka" />
+        <module name="hms-provider-hbs" />
         <module name="hms-provider-oms" />
         <module name="hms-provider-rms" />
         <module name="hms-provider-ums" />
@@ -20,6 +21,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="hms-provider-sms" target="1.8" />
       <module name="hms-server-config" target="1.8" />
       <module name="hms-server-eureka" target="1.5" />
       <module name="hms-server-room" target="1.8" />
@@ -34,8 +36,10 @@
       <module name="hms-common-util" options="-nowarn" />
       <module name="hms-config" options="-nowarn" />
       <module name="hms-eureka" options="-nowarn" />
+      <module name="hms-provider-hbs" options="-nowarn" />
       <module name="hms-provider-oms" options="-nowarn" />
       <module name="hms-provider-rms" options="-nowarn" />
+      <module name="hms-provider-sms" options="-nowarn" />
       <module name="hms-provider-ums" options="-nowarn" />
       <module name="hms-provider-ums-api" options="-nowarn" />
       <module name="hms-server-config" options="-nowarn" />

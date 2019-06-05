@@ -57,6 +57,12 @@ public class GlobalConstant {
 		int EIGHTEEN_INT = 18;
 	}
 
+	public static final class Room{
+
+		//final关键字可以用来修饰类、方法和变量（包括成员变量和局部变量）
+		//第一个原因是把方法锁定，以防任何继承类修改它的含义；第二个原因是效率
+		public static final String REDIS_ROOM_STOCK = "REDIS_ROOM_STOCK:";
+	}
 
 	/**
 	 * 系统常量

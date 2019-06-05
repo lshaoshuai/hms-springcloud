@@ -9,7 +9,17 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>hms-provider-oms</artifactId>
+    <name>hms-provider-oms</name>
+    <description>
+        订单管理服务 - room management service
+    </description>
 
+    <groupId>com.luo</groupId>
+    <artifactId>hms-provider-oms</artifactId>
+    <version>${project.parent.version}</version>
+
+    <dependencies>
+
+    </dependencies>
 
 </project>

@@ -13,7 +13,6 @@ spring:
     port: 5672
     username: luoshao
     password: password
-
   redis:
     host: 127.0.0.1
     port: 6379

@@ -5,7 +5,7 @@ import com.hms.base.constant.GlobalConstant;
 import com.hms.provider.service.RedisService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 
@@ -62,7 +62,7 @@ public class RedisServiceimpl implements RedisService{
      */
 
     @Resource
-    private StringRedisTemplate rt;
+    private RedisTemplate<String, Object> rt;
 
     @Override
     public boolean hasKey(String key){
@@ -76,9 +76,9 @@ public class RedisServiceimpl implements RedisService{
     }
 
     @Override
-    public String getKey(String key) {
-        String value = null;
-        ValueOperations<String, String> ops = rt.opsForValue();
+    public Object getKey(String key) {
+        Object value = null;
+        ValueOperations<String, Object> ops = rt.opsForValue();
         if (rt.hasKey(key)) {
             value = ops.get(key);
         }
@@ -94,10 +94,10 @@ public class RedisServiceimpl implements RedisService{
     }
 
     @Override
-    public void setKey(String key, String value) {
+    public void setKey(String key, Object value) {
         Preconditions.checkArgument(StringUtils.isNotEmpty(key), "Redis key is not null");
 
-        ValueOperations<String, String> ops = rt.opsForValue();
+        ValueOperations<String, Object> ops = rt.opsForValue();
         ops.set(key, value);
         rt.expire(key, GlobalConstant.Sys.REDIS_DEFAULT_EXPIRE, TimeUnit.MINUTES);
         log.info("setKey. [OK] key={}, value={}, expire=默认超时时间", key, value);
@@ -106,10 +106,10 @@ public class RedisServiceimpl implements RedisService{
     }
 
     @Override
-    public void setKey(String key, String value, long timeout, TimeUnit unit) {
+    public void setKey(String key, Object value, long timeout, TimeUnit unit) {
         Preconditions.checkArgument(StringUtils.isNotEmpty(key), "Redis key is not null");
         Preconditions.checkArgument(unit != null, "TimeUnit is not null");
-        ValueOperations<String, String> ops = rt.opsForValue();
+        ValueOperations<String, Object> ops = rt.opsForValue();
         ops.set(key, value);
         rt.expire(key, timeout, unit);
         log.info("setKey. [OK] key={}, value={}, timeout={}, unit={}", key, value, timeout, unit);

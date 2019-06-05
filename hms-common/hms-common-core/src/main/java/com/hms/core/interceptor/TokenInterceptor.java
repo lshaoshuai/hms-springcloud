@@ -1,11 +1,12 @@
 package com.hms.core.interceptor;
 
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.hms.RedisKeyUtil;
 import com.hms.ThreadLocalMap;
 import com.hms.annotation.NoNeedAccessAuthentication;
 import com.hms.base.constant.GlobalConstant;
-import com.hms.base.dto.LoginAuthDto;
 import com.hms.base.dto.UserTokenDto;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
@@ -104,14 +105,16 @@ public class TokenInterceptor implements HandlerInterceptor {
 
 		String token = StringUtils.substringAfter(request.getHeader(HttpHeaders.AUTHORIZATION), "Bearer ");
 		log.info("<== preHandle - 权限拦截器.  token={}", token);
-		LoginAuthDto loginUser = (UserTokenDto) redisTemplate.opsForValue().get(RedisKeyUtil.getAccessTokenKey(token));
-		if (loginUser == null) {
+		log.info("Redis的Json数据{}",redisTemplate.opsForValue().get(RedisKeyUtil.getAccessTokenKey(token)));
+		//UserTokenDto userTokenDto =  (UserTokenDto)redisTemplate.opsForValue().get(RedisKeyUtil.getAccessTokenKey(token));
+		UserTokenDto userTokenDto =  JSON.toJavaObject((JSONObject)redisTemplate.opsForValue().get(RedisKeyUtil.getAccessTokenKey(token)),UserTokenDto.class);
+		if (userTokenDto == null) {
 			log.error("获取用户信息失败, 不允许操作");
 			return false;
 		}
-		log.info("<== preHandle - 权限拦截器.  loginUser={}", loginUser);
-		ThreadLocalMap.put(GlobalConstant.Sys.	TOKEN_AUTH_DTO, loginUser);
-		log.info("<== preHandle - 权限拦截器.  url={}, loginUser={}", uri, loginUser);
+		log.info("<== preHandle - 权限拦截器.  loginUser={}", userTokenDto);
+		ThreadLocalMap.put(GlobalConstant.Sys.	TOKEN_AUTH_DTO, userTokenDto);
+		log.info("<== preHandle - 权限拦截器.  url={}, loginUser={}", uri, userTokenDto);
 		return true;
 	}
 

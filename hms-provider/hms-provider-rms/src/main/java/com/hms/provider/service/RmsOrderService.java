@@ -1,7 +1,7 @@
 package com.hms.provider.service;
 
 import com.hms.core.support.IService;
-import com.hms.vo.RoomVo;
+import com.hms.provider.vo.RoomVo;
 
 /**
  * @author luoshao
@@ -9,15 +9,7 @@ import com.hms.vo.RoomVo;
  * @projectname HMS
  * @github https://github.com/lshaoshuai/hms-springcloud
  */
-public interface RmsOrderService  extends IService<RoomVo> {
+public interface RmsOrderService  extends IService{
 
-    /**
-     * 查询订单详情.
-     *
-     * @param orderNo the order no
-     *
-     * @return the order detail
-     */
-    RoomVo getRoomDetail(String orderNo);
 
 }

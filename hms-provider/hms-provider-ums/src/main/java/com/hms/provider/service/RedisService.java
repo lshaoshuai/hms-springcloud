@@ -16,7 +16,7 @@ public interface RedisService {
      *
      * @return the key
      */
-    String getKey(String key);
+    Object getKey(String key);
 
     /**
      *
@@ -38,7 +38,7 @@ public interface RedisService {
      * @param key   the key
      * @param value the value
      */
-    void setKey(String key, String value);
+    void setKey(String key, Object value);
 
     /**
      * Sets key.
@@ -48,5 +48,5 @@ public interface RedisService {
      * @param timeout the timeout 过期时间
      * @param unit    the unit 时间单位
      */
-    void setKey(String key, String value, final long timeout, final TimeUnit unit);
+    void setKey(String key, Object value, final long timeout, final TimeUnit unit);
 }
