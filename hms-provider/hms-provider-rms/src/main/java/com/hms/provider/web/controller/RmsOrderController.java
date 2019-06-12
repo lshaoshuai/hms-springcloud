@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @author luoshao
@@ -30,14 +31,43 @@ public class RmsOrderController extends BaseController {
     @Resource
     private RmsActionService rmsActionService;
 
-    @PostMapping("detail/{hotelid}")
-    @ApiOperation(httpMethod = "POST", value = "查询订单详情")
-    public Wrapper queryUserOrderDetailList(@PathVariable int hotelid) {
+    @PostMapping("/detail/{hotelid}")
+    @ApiOperation(httpMethod = "POST", value = "查询房间详情")
+    public Wrapper queryRoomDetailList(@PathVariable int hotelid) {
 
         logger.info("queryUserOrderDetailList - 查询房间明细. hotelid={}", hotelid);
         Long mobile = getLoginAuthDto().getPhone_num();
         logger.info("操作人信息. mobile={}", mobile);
-        RoomVo[] roomvo = rmsActionService.getRoomsInfo(hotelid);
-        return WrapMapper.ok(roomvo);
+        List<RoomVo> roomvos = rmsActionService.getRoomsCountInfo(hotelid);
+        logger.info("room信息. room[]={}", roomvos);
+        return WrapMapper.ok(roomvos);
     }
+
+    @PostMapping("/count/{hotelid}")
+    @ApiOperation(httpMethod = "POST", value = "查询房间总数量")
+    public Wrapper queryRoomCountList(@PathVariable int hotelid) {
+
+        logger.info("queryUserOrderDetailList - 查询房间明细. hotelid={}", hotelid);
+        Long mobile = getLoginAuthDto().getPhone_num();
+        logger.info("操作人信息. mobile={}", mobile);
+        List<RoomVo> roomRestVos = rmsActionService.getRoomsInfo(hotelid);
+        logger.info("roomCount信息. room[]={}", roomRestVos);
+        return WrapMapper.ok(roomRestVos);
+
+    }
+
+    @PostMapping("/single/count/{roomid}")
+    @ApiOperation(httpMethod = "POST", value = "查询单个房间剩余数量")
+    public Wrapper querySingleRoomCount(@PathVariable int roomid) {
+
+        logger.info("queryUserOrderDetailList - 查询房间明细. hotelid={}", roomid);
+        Long mobile = getLoginAuthDto().getPhone_num();
+        logger.info("操作人信息. mobile={}", mobile);
+        int room_count = rmsActionService.getSingleRoomCountInfo(roomid);
+        logger.info("roomCount信息:{}", room_count);
+        return WrapMapper.ok(room_count);
+
+    }
+
+
 }

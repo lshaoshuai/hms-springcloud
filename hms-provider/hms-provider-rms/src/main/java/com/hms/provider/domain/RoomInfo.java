@@ -4,6 +4,7 @@ package com.hms.provider.domain;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Blob;
 
 /**
@@ -15,7 +16,9 @@ import java.sql.Blob;
 @Entity(name = "roominfo")
 @Data
 @Table(name = "room_info")
-public class RoomInfo {
+public class RoomInfo implements Serializable {
+
+    private static final long serialVersionUID = 8050352918615199254L;
 
     @Id
     @GeneratedValue

@@ -2,13 +2,14 @@ package com.hms.provider.mq.consumer;
 
 import com.rabbitmq.client.Channel;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
-import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
-import static com.hms.base.constant.MqConstant.ORDER_QUEUE;
+import static com.hms.base.constant.MqConstant.ROOM_QUEUE;
 
 /**
  * @author luoshao
@@ -19,7 +20,7 @@ import static com.hms.base.constant.MqConstant.ORDER_QUEUE;
 
 
 @Slf4j
-@Component
+//@Component
 public class OrderConsumer {
 
     /**
@@ -27,12 +28,18 @@ public class OrderConsumer {
      * @param message
      * @param channel
      */
-    @RabbitListener(queues = {ORDER_QUEUE})
+    private Logger logger = LoggerFactory.getLogger(getClass());
+
+    @RabbitListener(queues = {ROOM_QUEUE})
     public void handleMessage(Message message,Channel channel) throws IOException {
         try {
             // 处理消息
-            System.out.println("OrderConsumer {} handleMessage :"+message);
-            System.out.println(new String(message.getBody()));
+//            if(){
+//
+//
+//            }
+            logger.info("OrderConsumer {} handleMessage :"+message);
+
         }catch (Exception e){
             log.error("OrderConsumer  handleMessage {} , error:",message,e);
             channel.basicNack(message.getMessageProperties().getDeliveryTag(),false,true);

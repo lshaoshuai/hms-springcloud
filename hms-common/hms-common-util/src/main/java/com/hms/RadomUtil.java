@@ -13,4 +13,9 @@ public class RadomUtil {
         return String.valueOf(num);
     }
 
+    public static int createRadomID(){
+        int num = (int)(Math.random()*9000)+1000;
+        return num;
+    }
+
 }

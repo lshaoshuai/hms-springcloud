@@ -42,8 +42,16 @@ spring:
     hibernate:
       ddl-auto: update            #配置自动建表
     show-sql: true
-#spring:
-#  cloud:
+  mail:
+    host: smtp.qq.com
+    username: 1939125539@qq.com #发送方的邮箱
+    password: jwzljxaqishyeaba #对于qq邮箱而言 密码指的就是发送方的授权码
+    default-encoding: UTF-8
+  smtp:
+    auth: true
+    starttls:
+      enable: true
+      required: true
 #    config:
 #      server:
 #        native:

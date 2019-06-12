@@ -154,4 +154,17 @@ public class RedisServiceImpl implements RedisService{
         log.info("getKey. [OK] key={}, value={}", key, value);
         return value;
     }
+
+    @Override
+    public long incr(String key){
+
+        long value = 0;
+        Preconditions.checkArgument(StringUtils.isNotEmpty(key), "Redis key is not null");
+        ValueOperations<String, String> ops = srt.opsForValue();
+        if (rt.hasKey(key)) {
+            value = ops.increment(key,1);
+        }
+        log.info("getKey. [OK] key={}, value={}", key, value);
+        return value;
+    }
 }

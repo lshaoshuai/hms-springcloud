@@ -16,6 +16,12 @@
     </description>
 
     <!--基础共用依赖放到上级pom-->
-    <dependencies></dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.6.0</version>
+        </dependency>
+    </dependencies>
 
 </project>

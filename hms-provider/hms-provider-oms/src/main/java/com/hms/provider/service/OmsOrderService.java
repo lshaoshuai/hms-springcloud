@@ -2,6 +2,7 @@ package com.hms.provider.service;
 
 import com.hms.core.support.IService;
 import com.hms.provider.dto.OrderDto;
+import com.hms.provider.vo.OrderVo;
 
 /**
  * @author luoshao
@@ -11,7 +12,9 @@ import com.hms.provider.dto.OrderDto;
  */
 public interface OmsOrderService extends IService {
 
-    OrderDto queryOrderInfo();
+    OrderVo[] queryOrderInfo(String userid);
 
-    void sendOrderInfoToMq(int roomid ,long userid);
+    String createOrderInfo(OrderDto orderDto) throws Exception;
+
+    boolean commitOrder(int order_id,int room_id,long mobile);
 }

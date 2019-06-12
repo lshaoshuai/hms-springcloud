@@ -13,6 +13,10 @@ spring:
     port: 5672
     username: luoshao
     password: password
+  mvc:
+    static-path-pattern: /image/**
+  resources:
+    static-locations: file:C:\Users\lshao\Desktop\PPT
 
   redis:
     host: 127.0.0.1
@@ -32,8 +36,8 @@ spring:
     username: root
     password: password
     driver-class-name: com.mysql.cj.jdbc.Driver
-    #----durid info ---
-    type: com.alibaba.druid.pool.DruidDataSource
+#    #----durid info ---
+#    type: com.alibaba.druid.pool.DruidDataSource
     dbcp2:
       min-idle: 5         #数据库连接池的最小维持连接数
       initial-size: 5     #初始化提供的连接数
@@ -58,3 +62,6 @@ spring:
 
 server:
   port: 12224
+
+
+

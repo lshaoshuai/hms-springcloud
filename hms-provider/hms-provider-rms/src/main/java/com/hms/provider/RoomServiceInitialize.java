@@ -9,6 +9,7 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 import static com.hms.base.constant.GlobalConstant.Room.REDIS_ROOM_STOCK;
 
@@ -30,12 +31,14 @@ public class RoomServiceInitialize implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
+
         logger.info("InitSequenceBean: afterPropertiesSet");
-        RoomVo[] roomVos = rmsActionService.getRoomsInfo(1);
+        List<RoomVo> roomVos = rmsActionService.getRoomsInfo(1);
         if(roomVos == null){
             return;
         }
         for(RoomVo roomVo : roomVos){
+            redisService.deleteKey(REDIS_ROOM_STOCK + roomVo.getId());
             redisService.setKey(REDIS_ROOM_STOCK + roomVo.getId(),roomVo.getRoom_count());
         }
         logger.info("Initialize Finish");

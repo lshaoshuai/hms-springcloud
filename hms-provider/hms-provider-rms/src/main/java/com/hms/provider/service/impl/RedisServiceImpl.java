@@ -8,6 +8,7 @@ import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.concurrent.TimeUnit;
@@ -138,6 +139,7 @@ public class RedisServiceImpl implements RedisService{
     }
 
     @Override
+    @Transactional(rollbackFor=Exception.class)
     public long decr(String key, Object hashkey){
 
         long value = 0;

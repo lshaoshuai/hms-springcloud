@@ -64,6 +64,22 @@ public class GlobalConstant {
 		public static final String REDIS_ROOM_STOCK = "REDIS_ROOM_STOCK:";
 	}
 
+	public static final class Order{
+
+		//final关键字可以用来修饰类、方法和变量（包括成员变量和局部变量）
+		//第一个原因是把方法锁定，以防任何继承类修改它的含义；第二个原因是效率
+		public static final String ORDER_ID = "ORDER_ID:";
+
+		public static final String ORDER_HASH_KEY = "ORDER_HASH_KEY:";
+	}
+
+	public static final class User{
+
+		//final关键字可以用来修饰类、方法和变量（包括成员变量和局部变量）
+		//第一个原因是把方法锁定，以防任何继承类修改它的含义；第二个原因是效率
+		public static final String VERIFY_CODE = "VERIFY_CODE:";
+		public static final String TOKEN_CODE = "TOKEN_CODE:";
+	}
 	/**
 	 * 系统常量
 	 */
@@ -112,6 +128,8 @@ public class GlobalConstant {
 		 * redis key default expire = 1MINUTES
 		 */
 		public static final long REDIS_DEFAULT_EXPIRE = 1L;
+
+		public static final String SYSTEM_PIC_PATH = "C:\\Users\\lshao\\Desktop\\PPT";
 	}
 
 	/**
@@ -149,21 +167,6 @@ public class GlobalConstant {
 		public static final String SLASH = "/";
 		public static final String MH = ":";
 
-	}
-
-	/**
-	 * The class Oss.
-	 *
-	 * @author paascloud.net@gmail.com
-	 */
-	public static final class Oss {
-		private Oss() {
-		}
-
-		/**
-		 * The constant DEFAULT_FILE_PATH.
-		 */
-		public static final String DEFAULT_FILE_PATH = "/default/";
 	}
 
 

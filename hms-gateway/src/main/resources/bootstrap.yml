@@ -1,0 +1,30 @@
+#需要将配置文件名改为bootstrap,因为spring boot默认执行的配置文件application.yml
+#项目启动之后，就会直接加载,而bootstrap,yml在spring boot中会优先加载，且bootstrap
+#中的属性不会被覆盖
+
+
+server:
+  port: 8200
+
+spring:
+  application:
+    name: hms-service-zuul
+#  cloud:
+#    config:
+#      name: service-zuul #文件名前缀名称
+#      profile: dev
+#      label: master
+#      uri: http://localhost:11113/
+zuul:
+  routes:
+    api-room:
+      path: /api-room/**
+      #service-id: hms-service-room
+      uri: http://127.0.0.1:12222/
+
+#服务器不用注册到其他服务器
+eureka:
+  client:
+    registerWithEureka: false
+  #服务器不用去服务器抓取注册信息
+    fetchRegistry: false

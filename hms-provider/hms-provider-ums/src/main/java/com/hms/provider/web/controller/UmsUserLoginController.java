@@ -4,7 +4,7 @@ import com.hms.core.annotation.IsMobile;
 import com.hms.core.support.BaseController;
 import com.hms.provider.dto.CodeDto;
 import com.hms.provider.service.UmsUserService;
-import com.hms.provider.vo.UserVo;
+import com.hms.provider.vo.UserTokenVo;
 import com.hms.wrapper.WrapMapper;
 import com.hms.wrapper.Wrapper;
 import io.swagger.annotations.Api;
@@ -94,8 +94,8 @@ public class UmsUserLoginController extends BaseController {
     @ApiOperation(httpMethod = "POST", value = "校验验证码")
     public Wrapper checkVerifyCode(@RequestBody @Valid CodeDto codedto) {
         logger.info("获取用户请求验证码TOKEN. token={}" ,codedto);
-        String token = umsUserService.createUserToken(codedto);
-        return WrapMapper.ok(token);
+        UserTokenVo userTokenVo = umsUserService.createUserToken(codedto);
+        return WrapMapper.ok(userTokenVo);
     }
 
     /**
@@ -115,10 +115,6 @@ public class UmsUserLoginController extends BaseController {
     @ApiOperation(httpMethod = "POST", value = "校验手机号")
     public Wrapper queryUserOrderDetailList(@PathVariable Long mobileNo) {
         logger.info("获取用户手机号码. mobile={}" ,mobileNo);
-        UserVo userVo = new UserVo();
-        userVo.setPhone_num(mobileNo);
-        userVo.setId(1);
-        userVo.setUser_name("luo");
         return WrapMapper.ok();
     }
 

@@ -29,7 +29,7 @@ git clone git@github.com:lshaoshuai/hms-springcloud.git
 ```
 - idea破解版教程：https://blog.csdn.net/weixin_44360042/article/details/90669131
 
-使用idea下载Lombok插件
+    使用idea下载Lombok插件
 
 - 下载Redis:[windows版本redis](https://github.com/microsoftarchive/redis/releases)
 

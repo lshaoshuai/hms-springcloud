@@ -23,7 +23,7 @@
         <module>hms-provider-api</module>
         <module>hms-config</module>
         <module>hms-eureka</module>
-        <module>hms-zuul</module>
+        <module>hms-gateway</module>
     </modules>
 
     <!-- 项目介绍 -->

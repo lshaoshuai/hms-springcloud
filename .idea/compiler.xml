@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -11,12 +12,12 @@
         <module name="hms-common-util" />
         <module name="hms-config" />
         <module name="hms-eureka" />
+        <module name="hms-gateway" />
         <module name="hms-provider-hbs" />
         <module name="hms-provider-oms" />
         <module name="hms-provider-rms" />
         <module name="hms-provider-ums" />
         <module name="hms-provider-ums-api" />
-        <module name="hms-zuul" />
         <module name="hsm-provider-rms-api" />
       </profile>
     </annotationProcessing>
@@ -36,6 +37,7 @@
       <module name="hms-common-util" options="-nowarn" />
       <module name="hms-config" options="-nowarn" />
       <module name="hms-eureka" options="-nowarn" />
+      <module name="hms-gateway" options="-nowarn" />
       <module name="hms-provider-hbs" options="-nowarn" />
       <module name="hms-provider-oms" options="-nowarn" />
       <module name="hms-provider-rms" options="-nowarn" />
@@ -47,7 +49,6 @@
       <module name="hms-server-room" options="-nowarn" />
       <module name="hms-service-zuul" options="-nowarn" />
       <module name="hms-web-hystrix-dash-board" options="-nowarn" />
-      <module name="hms-zuul" options="-nowarn" />
       <module name="hsm-provider-rms-api" options="-nowarn" />
     </option>
   </component>

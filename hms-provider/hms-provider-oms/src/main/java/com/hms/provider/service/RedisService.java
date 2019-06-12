@@ -55,4 +55,6 @@ public interface RedisService {
     Object getHashKey(String key, Object hashkey);
 
     long decr(String key);
+
+    long incr(String key);
 }

@@ -1,6 +1,7 @@
 package com.hms.provider.dao;
 
 import com.hms.provider.domain.HotelInfo;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
@@ -10,6 +11,7 @@ import org.apache.ibatis.annotations.Select;
  * @projectname HMS
  * @github https://github.com/lshaoshuai/hms-springcloud
  */
+@Mapper
 public interface HotelInfoDao {
 
     @Select("select * from hotel_info limit #{index},#{offset}")

@@ -6,6 +6,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @EnableSwagger2
+//@EnableEurekaClient
 @SpringBootApplication
 public class RoomServiceApplication {
 

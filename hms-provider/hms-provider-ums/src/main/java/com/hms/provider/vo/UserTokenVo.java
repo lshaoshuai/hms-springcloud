@@ -13,9 +13,7 @@ import lombok.Data;
 @ApiModel(value = "UserTokenVo")
 public class UserTokenVo {
 
-    private long id;
-
-    private long phone_num;
+    private String phone_num;
 
     private String acesstoken;
 }

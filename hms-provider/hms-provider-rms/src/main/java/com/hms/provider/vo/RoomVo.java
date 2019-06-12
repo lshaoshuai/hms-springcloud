@@ -9,7 +9,8 @@ import java.io.Serializable;
 @ApiModel(value = "RoomVo")
 public class RoomVo implements Serializable {
 
-    private static final long serialVersionUID = -6249397911566315813L;
+
+    private static final long serialVersionUID = 7371899636828413473L;
 
     private int id;
 

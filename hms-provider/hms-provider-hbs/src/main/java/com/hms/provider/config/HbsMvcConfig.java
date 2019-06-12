@@ -5,7 +5,6 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
@@ -15,11 +14,17 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  * @projectname HMS
  * @github https://github.com/lshaoshuai/hms-springcloud
  */
+
+/**
+ * //@EnableWebMvc+extends WebMvcConfigurerAdapter，在扩展的类中重写父类的方法即可，这种方式会屏蔽springboot的@EnableAutoConfiguration中的设置
+ * extends WebMvcConfigurationSupport，在扩展的类中重写父类的方法即可，这种方式会屏蔽springboot的@EnableAutoConfiguration中的设置
+ */
+
+
 @Configuration
-@EnableWebMvc
 @Import(SwaggerConfiguration.class) //引入配置类
 @MapperScan(basePackages = {"com.hms.provider.dao"}) //扫描Mapper包的路径
-public class HbsMvcConfig extends WebMvcConfigurerAdapter {
+public class  HbsMvcConfig extends WebMvcConfigurerAdapter {
 
 //    /** 解决跨域问题 **/
 //    public void addCorsMappings(CorsRegistry registry) ;
@@ -45,7 +50,7 @@ public class HbsMvcConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/**")
-                .addResourceLocations("classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/");
+                .addResourceLocations("classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/","classpath:/META-INF/resources/webjars");
     }
 
     /**

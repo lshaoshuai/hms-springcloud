@@ -12,8 +12,12 @@ import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.*;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
 
+import javax.sql.DataSource;
 import java.lang.reflect.Method;
+import java.sql.SQLException;
 
 /**
  * @author luoshao
@@ -44,6 +48,8 @@ public class RedisConfig extends CachingConfigurerSupport {
         template.setHashKeySerializer(new StringRedisSerializer());
 
         template.setConnectionFactory(redisConnectionFactory);
+
+        template.setEnableTransactionSupport(true);
         return template;
     }
 
@@ -79,6 +85,12 @@ public class RedisConfig extends CachingConfigurerSupport {
                 return sb.toString();
             }
         };
+    }
+
+    //配置事务管理器
+    @Bean
+    public PlatformTransactionManager transactionManager(DataSource dataSource) throws SQLException {
+        return new DataSourceTransactionManager(dataSource);
     }
 
     /**

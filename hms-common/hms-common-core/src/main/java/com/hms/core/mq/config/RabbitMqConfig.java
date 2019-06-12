@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import static com.hms.base.constant.MqConstant.ORDER_ROUTING_KEY;
+import static com.hms.base.constant.MqConstant.*;
 
 /**
  * @author luoshao
@@ -36,5 +36,21 @@ public class RabbitMqConfig {
     @Bean
     public Binding binding_order_queue() {
         return BindingBuilder.bind(queueConfig.orderQueue()).to(exchangeConfig.directExchange()).with(ORDER_ROUTING_KEY);
+    }
+
+
+    @Bean
+    public Binding binding_code_queue() {
+        return BindingBuilder.bind(queueConfig.codeQueue()).to(exchangeConfig.codeDirectExchange()).with(CODE_ROUTING_KEY);
+    }
+
+    @Bean
+    public Binding binding_room_queue() {
+        return BindingBuilder.bind(queueConfig.roomQueue()).to(exchangeConfig.roomExchange()).with(ROOM_ROUTING_KEY);
+    }
+
+    @Bean
+    public Binding delayPayBind() {
+        return BindingBuilder.bind(queueConfig.orderDelayQueue()).to(exchangeConfig.delayExchange()).with(DELAY_ORDER_ROUTING_KEY);
     }
 }

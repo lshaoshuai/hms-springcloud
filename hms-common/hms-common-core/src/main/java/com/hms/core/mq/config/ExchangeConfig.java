@@ -1,9 +1,11 @@
 package com.hms.core.mq.config;
 
 import org.springframework.amqp.core.DirectExchange;
+import org.springframework.amqp.core.ExchangeBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import static com.hms.base.constant.MqConstant.ORDER_EXCHANGE;
+
+import static com.hms.base.constant.MqConstant.*;
 
 /**
  * @author luoshao
@@ -24,6 +26,34 @@ public class ExchangeConfig {
     @Bean
     public DirectExchange directExchange() {
         DirectExchange directExchange = new DirectExchange(ORDER_EXCHANGE, true, false);
+        return directExchange;
+    }
+
+    /**
+     * 所有的消息都会被广播发送到队列上
+     * @return
+     */
+    @Bean
+    public DirectExchange delayExchange(){
+
+        return (DirectExchange) ExchangeBuilder
+                .directExchange(DELAY_ORDER_EXCHANGE)
+                .durable(true)
+                .build();
+    }
+
+    @Bean
+    public DirectExchange roomExchange(){
+
+        return (DirectExchange) ExchangeBuilder
+                .directExchange(ROOM_EXCHANGE)
+                .durable(true)
+                .build();
+    }
+
+    @Bean
+    public DirectExchange codeDirectExchange() {
+        DirectExchange directExchange = new DirectExchange(CODE_EXCHANGE, true, false);
         return directExchange;
     }
 }

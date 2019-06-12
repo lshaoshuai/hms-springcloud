@@ -113,7 +113,7 @@ public class TokenInterceptor implements HandlerInterceptor {
 			return false;
 		}
 		log.info("<== preHandle - 权限拦截器.  loginUser={}", userTokenDto);
-		ThreadLocalMap.put(GlobalConstant.Sys.	TOKEN_AUTH_DTO, userTokenDto);
+		ThreadLocalMap.put(GlobalConstant.Sys.TOKEN_AUTH_DTO, userTokenDto);
 		log.info("<== preHandle - 权限拦截器.  url={}, loginUser={}", uri, userTokenDto);
 		return true;
 	}

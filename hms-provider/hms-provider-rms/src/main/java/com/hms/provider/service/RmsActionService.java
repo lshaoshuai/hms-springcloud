@@ -3,6 +3,8 @@ package com.hms.provider.service;
 import com.hms.core.support.IService;
 import com.hms.provider.vo.RoomVo;
 
+import java.util.List;
+
 /**
  * @author luoshao
  * @date 2019/6/4 10:23
@@ -11,5 +13,9 @@ import com.hms.provider.vo.RoomVo;
  */
 public interface RmsActionService extends IService {
 
-    RoomVo[] getRoomsInfo(int hotel_id);
+    List<RoomVo> getRoomsInfo(int hotel_id);
+
+    List<RoomVo> getRoomsCountInfo(int hotel_id);
+
+    int getSingleRoomCountInfo(int room_id);
 }
