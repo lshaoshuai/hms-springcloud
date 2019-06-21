@@ -2,7 +2,7 @@ package com.hms.provider.web.controller;
 
 import com.hms.core.support.BaseController;
 import com.hms.provider.service.HotelQueryService;
-import com.hms.provider.vo.HotelInfoVo;
+import com.hms.provider.model.vo.HotelInfoVo;
 import com.hms.wrapper.WrapMapper;
 import com.hms.wrapper.Wrapper;
 import io.swagger.annotations.Api;
@@ -43,5 +43,13 @@ public class HbsAppController extends BaseController {
         HotelInfoVo hotelInfoVo = hotelQueryService.getHotelInfo(index,offset);
         return WrapMapper.ok(hotelInfoVo);
     }
+
+    @PostMapping("/change")
+    @ApiOperation(httpMethod = "POST", value = "修改酒店信息")
+    public Wrapper changHotelInfo(){
+        return WrapMapper.ok();
+    }
+
+
 
 }

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>hms-springcloud</artifactId>
+        <groupId>com.luo</groupId>
+        <version>1.0.0</version>
+    </parent>
+
+    <name>hms-zipkin</name>
+        <description>Demo project for Spring Boot</description>
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 项目模块 -->
+    <groupId>com.luo</groupId>
+    <artifactId>hms-zipkin</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.luo</groupId>
+            <artifactId>hms-common-util</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.luo</groupId>
+            <artifactId>hms-common-base</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.luo</groupId>
+            <artifactId>hms-common-core</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.zipkin.java</groupId>
+            <artifactId>zipkin-autoconfigure-ui</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-sleuth-zipkin-stream</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+        </dependency>
+        <!-- 数据库驱动 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.11</version><!--$NO-MVN-MAN-VER$ -->
+        </dependency>
+    </dependencies>
+
+
+</project>

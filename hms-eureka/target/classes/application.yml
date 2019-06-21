@@ -12,7 +12,7 @@ eureka:
     hostname: server.eureka.slave1.com # 服务所在主机（一般都是配置域名）；本地测试的话，需要在 host 文件中指定虚拟域名
   client:
     service-url:
-      defaultZone: http://server.eureka.slave2.com:28761/eureka # eureka服务器的地址，互相进行监控，设置服务注册中心地址，指向另一个注册中心
+      defaultZone: http://user:password@server.eureka.slave2.com:28761/eureka # eureka服务器的地址，互相进行监控，设置服务注册中心地址，指向另一个注册中心
     fetch-registry: false # 获取注册列表
     register-with-eureka: true # 是否将自己也注册到其他eureka节点上。一般设置为true或者默认即可，这样才会在eureka控制台上看到所有的eureka集群列表信息
 
@@ -36,3 +36,11 @@ eureka:
       defaultZone: http://server.eureka.slave1.com:18761/eureka # eureka服务器的地址
     fetch-registry: false # 获取注册列表
     register-with-eureka: true # 是否将自己也注册到其他eureka节点上。一般设置为true或者默认即可，这样才会在eureka控制台上看到所有的eureka集群列表信息
+
+#添加用户验证
+security:
+  basic:
+    enabled: true           # 开启基于HTTP basic的认证
+  user:
+    name: user              # 配置登录的账号是user
+    password: password   # 配置登录的密码是password

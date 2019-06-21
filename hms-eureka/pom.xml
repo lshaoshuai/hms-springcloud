@@ -17,6 +17,10 @@
             <artifactId>spring-cloud-starter-eureka-server</artifactId>
             <version>${eureka.starter.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-start-security</artifactId>
+        </dependency>
     </dependencies>
 
 

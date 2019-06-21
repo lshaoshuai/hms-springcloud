@@ -1,4 +1,4 @@
-package com.hms.provider.domain;
+package com.hms.provider.model.domain;
 
 import lombok.Data;
 

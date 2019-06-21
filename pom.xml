@@ -24,6 +24,8 @@
         <module>hms-config</module>
         <module>hms-eureka</module>
         <module>hms-gateway</module>
+        <module>hms-zipkin</module>
+        <module>hms-hystrix-dashboard</module>
     </modules>
 
     <!-- 项目介绍 -->
@@ -41,7 +43,7 @@
         <spring.cloud.version>Dalston.SR4</spring.cloud.version>
         <eureka.starter.version>1.4.2.RELEASE</eureka.starter.version>
     </properties>
-
+    <!-- <scope>标签在打包的时候排除tomcat依赖 -->
     <!-- 此项配置的意思是：pom.xml中的parent引用，可以引用我们自己项目的parent，而不是 c的parent。方便项目模块的扩展和管理。必须配置在dependencyManagement节点中 -->
     <dependencyManagement>
         <dependencies>
@@ -68,6 +70,7 @@
     </dependencyManagement>
 
     <!--项目构建配置-->
+    <!--使用maven的assembly插件进行打包-->
     <build>
         <plugins>
             <plugin>

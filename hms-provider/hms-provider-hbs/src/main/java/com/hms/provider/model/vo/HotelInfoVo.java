@@ -1,4 +1,4 @@
-package com.hms.provider.vo;
+package com.hms.provider.model.vo;
 
 import lombok.Data;
 

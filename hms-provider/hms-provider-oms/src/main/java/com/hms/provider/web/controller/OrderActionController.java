@@ -66,4 +66,13 @@ public class OrderActionController extends BaseController {
         }
 
     }
+
+    @PostMapping("/select/{id}")
+    @ApiOperation(httpMethod = "POST", value = "生成订单信息")
+    public Wrapper selectOrderInfo(){
+
+        logger.info("测试JRebel");
+        return WrapMapper.ok();
+    }
+
 }

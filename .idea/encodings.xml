@@ -9,6 +9,7 @@
     <file url="file://$PROJECT_DIR$/hms-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hms-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hms-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hms-hystrix-dashboard" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hms-provider" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hms-provider-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hms-provider-api/hms-provider-ums-api" charset="UTF-8" />
@@ -17,5 +18,6 @@
     <file url="file://$PROJECT_DIR$/hms-provider/hms-provider-oms" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hms-provider/hms-provider-rms" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hms-provider/hms-provider-ums" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hms-zipkin" charset="UTF-8" />
   </component>
 </project>

@@ -11,10 +11,17 @@
 
     <artifactId>hms-provider-api</artifactId>
     <packaging>pom</packaging>
+
     <modules>
         <module>hsm-provider-rms-api</module>
         <module>hms-provider-ums-api</module>
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
+    </dependencies>
 
 
 </project>

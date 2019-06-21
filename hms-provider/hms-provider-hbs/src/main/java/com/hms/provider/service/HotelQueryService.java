@@ -1,7 +1,7 @@
 package com.hms.provider.service;
 
 import com.hms.core.support.IService;
-import com.hms.provider.vo.HotelInfoVo;
+import com.hms.provider.model.vo.HotelInfoVo;
 
 /**
  * @author luoshao

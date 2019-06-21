@@ -3,9 +3,10 @@ package com.hms;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-//@EnableEurekaClient
+@EnableDiscoveryClient  //由于服务发现组件有多种选择，Zookeeper,Consul等，这个注解为各种服务提供了支持
 @SpringBootApplication
 @EnableSwagger2
 public class HbsServiceApplication {
