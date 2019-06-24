@@ -18,9 +18,13 @@ spring:
 zuul:
   routes:
     api-hotel:
-      path: /api-hotel/**
-      service-id: hms-service-hbs
-#      uri: http://127.0.0.1:12224/
+      path: api-hotel/**
+      service-id: hms-service-hbs #zuul注册到eureka上去发现其它服务，对于同名的微服务会进行负载均衡
+  prefix: /api/
+#     uri: http://127.0.0.1:12224/ 通过url直接映射
+ribbon:
+  ConnectTimeout: 500
+  ReadTimeout: 3000
 
 #服务器不用注册到其他服务器
 #eureka:

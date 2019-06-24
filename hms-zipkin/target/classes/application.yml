@@ -34,15 +34,33 @@ spring:
       max-wait: -1
 
   datasource:
-    url: jdbc:mysql://localhost:3306/zipkin?useUnicode=true&serverTimezone=Asia/Shanghai
-    username: root
-    password: password
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    dbcp2:
-      min-idle: 5         #数据库连接池的最小维持连接数
-      initial-size: 5     #初始化提供的连接数
-      max-total: 5          #最大的连接数
-      max-wait-millis: 200        #等待连接获取的最大超时时间
+    druid:
+      url: jdbc:mysql://localhost:3306/zipkin?useUnicode=true&serverTimezone=Asia/Shanghai
+      username: root
+      password: password
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      initial-size: 8
+      min-idle: 1
+      max-active: 20
+      max-wait: 60000
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-open-prepared-statements: 20
+      max-pool-prepared-statement-per-connection-size: 20
+      filters: stat
+      connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      use-global-data-source-stat: true
+      stat-view-servlet:
+        url-pattern: /druid/*
+        enabled: true
+      web-stat-filter:
+        enabled: true
+#    schema:
+#      - classpath:sql/zipkin.sql # 根据sql建表
+    type:
+
 zipkin:
   storage:
     type: mysql
@@ -52,4 +70,4 @@ eureka:
     lease-renewal-interval-in-seconds: 5 # 心跳时间，表示eureka client发送心跳给eureka server端的频率（缺省为30s）
   client:
     service-url:
-      defaultZone: http://server.eureka.slav  e1.com:18761/eureka,http://server.eureka.slave2.com:28761/eureka # 指定eureka服务器集群列表地址
+      defaultZone: http://server.eureka.slave1.com:18761/eureka,http://server.eureka.slave2.com:28761/eureka # 指定eureka服务器集群列表地址

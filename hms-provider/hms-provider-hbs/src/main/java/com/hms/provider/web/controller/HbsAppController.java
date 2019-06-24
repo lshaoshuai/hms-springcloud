@@ -1,10 +1,11 @@
 package com.hms.provider.web.controller;
 
 import com.hms.core.support.BaseController;
-import com.hms.provider.service.HotelQueryService;
 import com.hms.provider.model.vo.HotelInfoVo;
+import com.hms.provider.service.HotelQueryService;
 import com.hms.wrapper.WrapMapper;
 import com.hms.wrapper.Wrapper;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -39,9 +40,14 @@ public class HbsAppController extends BaseController {
             @ApiImplicitParam(name = "index", value = "索引位置", required = true, dataType = "long", paramType = "path"),
             @ApiImplicitParam(name = "offset", value = "位移数", required = true, dataType = "long", paramType = "path")
     })
+    @HystrixCommand(fallbackMethod = "httpError")
     public Wrapper queryHotelInfo(@PathVariable int index,@PathVariable int offset){
         HotelInfoVo hotelInfoVo = hotelQueryService.getHotelInfo(index,offset);
         return WrapMapper.ok(hotelInfoVo);
+    }
+
+    public Wrapper httpError(int i,int j) {
+        return WrapMapper.ok("" + i + j);
     }
 
     @PostMapping("/change")

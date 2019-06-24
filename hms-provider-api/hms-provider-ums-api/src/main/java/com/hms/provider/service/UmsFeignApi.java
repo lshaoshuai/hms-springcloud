@@ -9,6 +9,6 @@ import org.springframework.cloud.netflix.feign.FeignClient;
  * @projectname HMS
  * @github https://github.com/lshaoshuai/hms-springcloud
  */
-@FeignClient(value = "paascloud-provider-omc",  fallback = UmsFeignHystrix.class)
+@FeignClient(value = "hms-provider-ums",  fallback = UmsFeignHystrix.class)
 public interface UmsFeignApi {
 }

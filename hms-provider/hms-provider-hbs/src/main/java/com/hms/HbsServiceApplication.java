@@ -1,14 +1,12 @@
 package com.hms;
 
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.hms.core.annotation.CustomSpringCloudApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-@EnableDiscoveryClient  //由于服务发现组件有多种选择，Zookeeper,Consul等，这个注解为各种服务提供了支持
-@SpringBootApplication
-@EnableSwagger2
+import java.util.Scanner;
+
+@CustomSpringCloudApplication
 public class HbsServiceApplication {
 
     public static void main(String[] args) {
@@ -23,10 +21,10 @@ public class HbsServiceApplication {
          */
 
         System.out.println("================================================== 开始启动 hbs 服务 =============================================================");
-//        System.out.println("请在控制台指定user服务的端口号 —— [端口号随意指定，注意不要与本机端口号出现冲突即可]");
-//        Scanner scanner = new Scanner(System.in);
-//        String port = scanner.nextLine(); //让用户指定端口号
-        new SpringApplicationBuilder(HbsServiceApplication.class).run(args);//启动项目
+        System.out.println("请在控制台指定user服务的端口号 —— [端口号随意指定，注意不要与本机端口号出现冲突即可]");
+        Scanner scanner = new Scanner(System.in);
+        String port = scanner.nextLine(); //让用户指定端口号
+        new SpringApplicationBuilder(HbsServiceApplication.class).properties("server.port=" + port).run(args);//启动项目
 
         System.out.println("================================================== hbs服务启动成功 =============================================================");
     }

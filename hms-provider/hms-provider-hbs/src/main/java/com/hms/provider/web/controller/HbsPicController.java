@@ -20,8 +20,6 @@ public class HbsPicController {
     @PostMapping(value = "pic")
     @ApiOperation(httpMethod = "POST", value = "上传图片")
     public Wrapper picUpLoad(@RequestParam("file") MultipartFile file){
-
-
         return WrapMapper.ok();
     }
 }

@@ -13,9 +13,11 @@
         <module name="hms-config" />
         <module name="hms-eureka" />
         <module name="hms-gateway" />
-        <module name="hms-hystrix-dashboard" />
+        <module name="hms-monitor" />
         <module name="hms-provider-hbs" />
+        <module name="hms-provider-hbs-api" />
         <module name="hms-provider-oms" />
+        <module name="hms-provider-oms-api" />
         <module name="hms-provider-rms" />
         <module name="hms-provider-ums" />
         <module name="hms-provider-ums-api" />
@@ -40,9 +42,11 @@
       <module name="hms-config" options="-nowarn" />
       <module name="hms-eureka" options="-nowarn" />
       <module name="hms-gateway" options="-nowarn" />
-      <module name="hms-hystrix-dashboard" options="-nowarn" />
+      <module name="hms-monitor" options="-nowarn" />
       <module name="hms-provider-hbs" options="-nowarn" />
+      <module name="hms-provider-hbs-api" options="-nowarn" />
       <module name="hms-provider-oms" options="-nowarn" />
+      <module name="hms-provider-oms-api" options="-nowarn" />
       <module name="hms-provider-rms" options="-nowarn" />
       <module name="hms-provider-sms" options="-nowarn" />
       <module name="hms-provider-ums" options="-nowarn" />

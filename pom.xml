@@ -25,7 +25,7 @@
         <module>hms-eureka</module>
         <module>hms-gateway</module>
         <module>hms-zipkin</module>
-        <module>hms-hystrix-dashboard</module>
+        <module>hms-monitor</module>
     </modules>
 
     <!-- 项目介绍 -->

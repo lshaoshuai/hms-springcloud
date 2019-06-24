@@ -31,8 +31,6 @@ spring:
     username: root
     password: password
     driver-class-name: com.mysql.cj.jdbc.Driver
-    #----durid info ---
-    type: com.alibaba.druid.pool.DruidDataSource
     dbcp2:
       min-idle: 5         #数据库连接池的最小维持连接数
       initial-size: 5     #初始化提供的连接数
@@ -45,7 +43,7 @@ spring:
   mail:
     host: smtp.qq.com
     username: 1939125539@qq.com #发送方的邮箱
-    password: jwzljxaqishyeaba #对于qq邮箱而言 密码指的就是发送方的授权码
+    password: lzrsxwboabmfbggd #对于qq邮箱而言 密码指的就是发送方的授权码
     default-encoding: UTF-8
   smtp:
     auth: true

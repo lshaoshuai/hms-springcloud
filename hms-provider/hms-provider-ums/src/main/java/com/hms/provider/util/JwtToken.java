@@ -13,8 +13,8 @@ import com.hms.provider.dto.CodeDto;
 public class JwtToken {
 
     public static String getCodeToken(CodeDto codedto) {
-        String token="";
-        token= JWT.create().withAudience(String.valueOf(codedto.getPhone_num())).sign(Algorithm.HMAC256(String.valueOf(codedto.getPhone_num())));
+        String token = "";
+        token = JWT.create().withAudience(String.valueOf(codedto.getPhone_num())).sign(Algorithm.HMAC256(String.valueOf(codedto.getPhone_num())));
         return token;
     }
 }

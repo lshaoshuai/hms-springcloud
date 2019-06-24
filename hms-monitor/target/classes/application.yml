@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: hms-monitor
+eureka:
+  instance:
+    hostname: localhost # 服务提供者应用所在的主机（本地测试的话，使用localhost或者127.0.0.1即可，或者在host文件中指定一个虚拟域名也可以）
+    lease-renewal-interval-in-seconds: 5 # 心跳时间，表示eureka client发送心跳给eureka server端的频率（缺省为30s）
+  client:
+    service-url:
+      defaultZone: http://server.eureka.slave1.com:18761/eureka,http://ser ver.eureka.slave2.com:28761/eureka # 指定eureka服务器集群列表地址
+
+turbine:
+  app-config: hms-service-hbs # 指定要监控的应用名字；这里我就监控当前的消费者应用了
+  cluster-name-expression: new String("default") # 集群的名字
+  combine-host-port: true # 表示同一主机上的服务通过host和port的组合来进行区分，默认情况下是使用host来区分，这样会使本地调试有问题
+
+server:
+  port: 12230

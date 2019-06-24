@@ -9,11 +9,10 @@
     </parent>
 
     <name>hms-zipkin</name>
-        <description>Demo project for Spring Boot</description>
+    <description>Demo project for Spring Boot</description>
     <modelVersion>4.0.0</modelVersion>
 
     <!-- 项目模块 -->
-    <groupId>com.luo</groupId>
     <artifactId>hms-zipkin</artifactId>
 
     <dependencies>
@@ -28,9 +27,13 @@
             <version>1.0.0</version>
         </dependency>
         <dependency>
-            <groupId>com.luo</groupId>
-            <artifactId>hms-common-core</artifactId>
-            <version>1.0.0</version>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.10</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
