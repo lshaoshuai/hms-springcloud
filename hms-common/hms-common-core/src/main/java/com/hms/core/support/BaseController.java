@@ -3,6 +3,7 @@ package com.hms.core.support;
 import com.hms.PublicUtil;
 import com.hms.ThreadLocalMap;
 import com.hms.base.constant.GlobalConstant;
+import com.hms.base.dto.LocalUserTokenDto;
 import com.hms.base.dto.UserTokenDto;
 import com.hms.base.enums.ErrorCodeEnum;
 import com.hms.base.exception.BusinessException;
@@ -32,6 +33,19 @@ public class BaseController {
             throw new BusinessException(ErrorCodeEnum.UAC10011041);
         }
         return userTokenDto;
+    }
+
+    /**
+     * LocalUserToken
+     * @return
+     */
+    protected LocalUserTokenDto getLocalLoginAuthDto() {
+
+        LocalUserTokenDto localUserTokenDto =  (LocalUserTokenDto) ThreadLocalMap.get(GlobalConstant.Sys.TOKEN_AUTH_DTO);
+        if (PublicUtil.isEmpty(localUserTokenDto)) {
+            throw new BusinessException(ErrorCodeEnum.UAC10011041);
+        }
+        return localUserTokenDto;
     }
 
     /**

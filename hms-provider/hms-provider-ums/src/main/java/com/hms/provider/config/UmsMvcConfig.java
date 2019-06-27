@@ -55,10 +55,32 @@ public class UmsMvcConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         super.addCorsMappings(registry);
-        registry.addMapping("/cors/**")
+        registry.addMapping("/**")
                 .allowedHeaders("*")
-                .allowedMethods("POST","GET")
+                .allowedMethods("POST","GET", "DELETE", "PUT")
                 .allowedOrigins("*");
     }
 
+//    public CorsConfiguration addcorsConfig() {
+//        CorsConfiguration corsConfiguration = new CorsConfiguration();
+////        List<String> list = new ArrayList<>();
+////        list.add("*");
+////        corsConfiguration.setAllowedOrigins(list);
+//    /*
+//    // 请求常用的三种配置，*代表允许所有，当时你也可以自定义属性（比如header只能带什么，只能是post方式等等）
+//    */
+//        corsConfiguration.setAllowCredentials(true);
+//        corsConfiguration.setMaxAge(18000L);
+//        corsConfiguration.addAllowedOrigin("*");
+//        corsConfiguration.addAllowedHeader("*");
+//        corsConfiguration.addAllowedMethod("*");
+//        return corsConfiguration;
+//    }
+//
+//    @Bean
+//    public CorsFilter corsFilter() {
+//        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+//        source.registerCorsConfiguration("/**", addcorsConfig());
+//        return new CorsFilter(source);
+//    }
 }

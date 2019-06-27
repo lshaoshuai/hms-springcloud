@@ -59,11 +59,11 @@ spring:
         enabled: true
 #    schema:
 #      - classpath:sql/zipkin.sql # 根据sql建表
-    type:
 
 zipkin:
   storage:
     type: mysql
+
 eureka:
   instance:
     hostname: localhost # 服务提供者应用所在的主机（本地测试的话，使用localhost或者127.0.0.1即可，或者在host文件中指定一个虚拟域名也可以）

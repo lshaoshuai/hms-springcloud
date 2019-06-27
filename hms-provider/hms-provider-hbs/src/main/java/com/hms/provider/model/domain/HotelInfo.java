@@ -38,8 +38,13 @@ public class HotelInfo {
     @Column(name = "tap")
     private String tap;
 
+    @Column(name = "floor")
+    private int floor;
+
+    @Column(name = "location")
+    private String location;
+
     @Column(name = "commuser_num")
     private String commuser_num;
-
 
 }

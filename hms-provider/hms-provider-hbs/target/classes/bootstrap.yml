@@ -6,25 +6,14 @@ spring:
       label: master
       uri: http://localhost:11113/
   zipkin:
-    base-url: http://localhost:9411
-  sleuth:
-    sampler:
-      probability: 1
+    base-url: http://hms-zipkin:9411
+#  sleuth:
+#    sampler:
+#      probability: 1
   mvc:
     static-path-pattern: /image/**
   resources:
     static-locations: file:C:\Users\lshao\Desktop\PPT
-#spring:
-#  cloud:
-#    config:
-#      server:
-#        native:
-#          search-locations: classpath:properties/ # 搜索src/main/resource 下的properties文件夹下的文件
-#  application:
-#    name: service-config
-#  profiles:
-#    active: native  # 配置使用本地储存
-#swagger 配置
 eureka:
   instance:
 #    prefer-ip-address: true 表示将自己的ip注册到eureka上
@@ -35,7 +24,7 @@ eureka:
       defaultZone: http://server.eureka.slave1.com:18761/eureka,http://server.eureka.slave2.com:28761/eureka # 指定eureka服务器集群列表地址
 feign:
   hystrix:
-    enabled: true
+    enabled: true #启动hystrix实现服务降级
   client:
     config:
       default:

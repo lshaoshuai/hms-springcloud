@@ -1,6 +1,6 @@
 package com.hms.provider.dao;
 
-import com.hms.provider.domain.RoomInfo;
+import com.hms.provider.model.domain.RoomInfo;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
@@ -15,5 +15,12 @@ import java.util.List;
 public interface RoomInfoDao {
 
     @Select("select * from room_info where hotel_id = #{hotel_id}")
-    List<RoomInfo> queryRoomInfo(@Param("hotel_id") int hotel_id);
+    List<RoomInfo> queryRoomInfoByHotelId(@Param("hotel_id") int hotel_id);
+
+    @Select("select * from room_info where id = #{id}")
+    RoomInfo queryRoomInfoById(@Param("id") int id);
+
+    @Select("select room_name from room_info where hotel_id = #{hotelid}")
+    List<String> getRoomTypeList(@Param("hotelid")int hotelid);
+
 }

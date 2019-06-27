@@ -16,6 +16,24 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>com.luo</groupId>
+            <artifactId>hms-provider-hbs-api</artifactId>
+            <version>1.0.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.luo</groupId>
+            <artifactId>hms-provider-oms-api</artifactId>
+            <version>1.0.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.luo</groupId>
+            <artifactId>hsm-provider-rms-api</artifactId>
+            <version>1.0.0</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
 </project>

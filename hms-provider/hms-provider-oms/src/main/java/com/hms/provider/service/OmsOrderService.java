@@ -1,8 +1,8 @@
 package com.hms.provider.service;
 
 import com.hms.core.support.IService;
-import com.hms.provider.dto.OrderDto;
-import com.hms.provider.vo.OrderVo;
+import com.hms.provider.model.dto.OrderDto;
+import com.hms.provider.model.vo.OrderVo;
 
 /**
  * @author luoshao

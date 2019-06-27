@@ -43,6 +43,7 @@ public class TokenInterceptor implements HandlerInterceptor {
 	private static final String AUTH_PATH2 = "/oauth";
 	private static final String AUTH_PATH3 = "/error";
 	private static final String AUTH_PATH4 = "/api";
+	private static final String AUTH_PATH5 = "/localroom";
 
 	/**
 	 * After completion.
@@ -85,6 +86,7 @@ public class TokenInterceptor implements HandlerInterceptor {
 	 */
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
+
 		String uri = request.getRequestURI();
 		log.info("<== preHandle - 权限拦截器.  url={}", uri);
 		if (uri.contains(AUTH_PATH1) || uri.contains(AUTH_PATH2) || uri.contains(AUTH_PATH3) || uri.contains(AUTH_PATH4)) {
@@ -102,6 +104,22 @@ public class TokenInterceptor implements HandlerInterceptor {
 			log.info("<== preHandle - 不需要认证注解不走认证.  token={}");
 			return true;
 		}
+//		if(uri.contains(AUTH_PATH5))
+//		{
+//			log.info("<== preHandle - 本地用户拦截器已拦截");
+//			String token = StringUtils.substringAfter(request.getHeader(HttpHeaders.AUTHORIZATION), "Bearer ");
+//			log.info("<== preHandle - 权限拦截器.  token={}", token);
+//			log.info("Redis的Json数据{}",redisTemplate.opsForValue().get(RedisKeyUtil.getAccessTokenKey(token)));
+//			LocalUserTokenDto localUserTokenDto =  JSON.toJavaObject((JSONObject)redisTemplate.opsForValue().get(RedisKeyUtil.getAccessTokenKey(token)),LocalUserTokenDto.class);
+//			if (localUserTokenDto == null) {
+//				log.error("获取用户信息失败, 不允许操作");
+//				return false;
+//			}
+//			log.info("<== preHandle - 权限拦截器.  loginUser={}", localUserTokenDto);
+//			ThreadLocalMap.put(GlobalConstant.Sys.TOKEN_AUTH_DTO, localUserTokenDto);
+//			log.info("<== preHandle - 权限拦截器.  url={}, loginUser={}", uri, localUserTokenDto);
+//			return true;
+//		}
 
 		String token = StringUtils.substringAfter(request.getHeader(HttpHeaders.AUTHORIZATION), "Bearer ");
 		log.info("<== preHandle - 权限拦截器.  token={}", token);

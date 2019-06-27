@@ -4,11 +4,11 @@ import com.hms.RadomUtil;
 import com.hms.base.constant.GlobalConstant;
 import com.hms.core.support.BaseService;
 import com.hms.provider.dao.OrderDao;
-import com.hms.provider.domain.OrderInfo;
-import com.hms.provider.dto.OrderDto;
+import com.hms.provider.model.domain.OrderInfo;
+import com.hms.provider.model.dto.OrderDto;
 import com.hms.provider.service.OmsOrderService;
 import com.hms.provider.service.RedisService;
-import com.hms.provider.vo.OrderVo;
+import com.hms.provider.model.vo.OrderVo;
 import org.modelmapper.ModelMapper;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -85,7 +85,7 @@ public class OmsOrderServiceImpl extends BaseService implements OmsOrderService 
             orderInfo.setOrder_id(order_id);
         }else {
             //如果不存在则创建一个新的订单
-            orderInfo.setOrder_id(RadomUtil.createRadomID() + "");
+            orderInfo.setOrder_id(RadomUtil.createRadomOrderID() + "");
             redisService.setKey(ORDER_HASH_KEY + orderInfo.getRoom_id() + orderInfo.getUser_id(),orderInfo.getOrder_id(),90,TimeUnit.SECONDS);
             redisService.setKey(ORDER_ID + orderInfo.getOrder_id(), orderInfo.getPay_status(),90, TimeUnit.SECONDS);
             orderDao.insertOrderInfo(orderInfo);

@@ -7,8 +7,11 @@ import com.hms.provider.model.domain.HotelInfo;
 import com.hms.provider.model.vo.HotelInfoVo;
 import com.hms.provider.service.HotelQueryService;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @author luoshao
@@ -24,11 +27,20 @@ public class HotelQueryServiceImpl extends BaseService implements HotelQueryServ
 
     @Override
     @ServiceLog(operation = "正在获取宾馆信息....")
-    public HotelInfoVo getHotelInfo(int index,int offset){
+    public List<HotelInfoVo> getHotelInfo(int index,int offset){
 
         logger.info("获取到的索引位置为{},位移数为{}",index,offset);
-        HotelInfo hotelInfo = hotelInfoDao.queryLimitHotelInfo(index,offset);
-        HotelInfoVo hotelInfoVo = new ModelMapper().map(hotelInfo, HotelInfoVo.class);
-        return hotelInfoVo;
+        List<HotelInfo> hotelInfoList = hotelInfoDao.queryLimitHotelInfo(index,offset);
+        List<HotelInfoVo> hotelInfoVos = new ModelMapper().map(hotelInfoList, new TypeToken<List<HotelInfoVo>>() {}.getType());
+        return hotelInfoVos;
+    }
+
+    @Override
+    @ServiceLog(operation = "正在获取宾馆信息....")
+    public int getHotelFloorInfo(int hotelid){
+
+        logger.info("获取到的酒店id为 :{}",hotelid);
+        int floor = hotelInfoDao.queryHotelFloor(hotelid);
+        return floor;
     }
 }

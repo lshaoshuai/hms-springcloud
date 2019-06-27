@@ -1,6 +1,6 @@
 package com.hms.provider.dao;
 
-import com.hms.provider.vo.UserVo;
+import com.hms.provider.model.vo.UserVo;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;

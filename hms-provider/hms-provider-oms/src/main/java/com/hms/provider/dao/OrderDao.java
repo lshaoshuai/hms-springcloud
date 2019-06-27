@@ -1,6 +1,6 @@
 package com.hms.provider.dao;
 
-import com.hms.provider.domain.OrderInfo;
+import com.hms.provider.model.domain.OrderInfo;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -11,7 +11,6 @@ import java.util.List;
  * @projectname HMS
  * @github https://github.com/lshaoshuai/hms-springcloud
  */
-@Mapper
 public interface OrderDao {
 
     @Select("select * from order_info where user_id = #{user_id}")
@@ -27,4 +26,9 @@ public interface OrderDao {
 
     @Select("select * from order_info where order_id = #{order_id}")
     OrderInfo queryByOrderID(@Param("order_id") String order_id);
+
+    @Select("select count(*) from order_info")
+    int countRoomTotal();
+
+
 }

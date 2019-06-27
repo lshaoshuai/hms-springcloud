@@ -2,7 +2,7 @@ package com.hms.provider.mq.consumer;
 
 import com.hms.base.constant.GlobalConstant;
 import com.hms.provider.dao.OrderDao;
-import com.hms.provider.domain.OrderInfo;
+import com.hms.provider.model.domain.OrderInfo;
 import com.hms.provider.service.RedisService;
 import com.rabbitmq.client.Channel;
 import lombok.extern.slf4j.Slf4j;

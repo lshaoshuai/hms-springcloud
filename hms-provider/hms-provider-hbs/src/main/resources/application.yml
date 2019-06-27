@@ -1,7 +1,7 @@
 spring:
   application:
     # 具体代码调用，请看 \sea-web-shop\src\main\java\pers\zb\web\shop\controller\ShopController.java 中的router方法；
-    name: hms-service-hbs # 服务提供者的应用服务名称（服务调用者是通过调用此服务名（sea-service-user）来实现服务调用的，与域名和端口号没有关系了）
+    name: hms-service-hotel # 服务提供者的应用服务名称（服务调用者是通过调用此服务名（sea-service-user）来实现服务调用的，与域名和端口号没有关系了）
   rabbitmq:
     host: localhost
     port: 5672

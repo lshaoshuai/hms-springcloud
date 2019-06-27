@@ -32,6 +32,18 @@
             <artifactId>javax.el</artifactId>
             <version>2.2.4</version>
         </dependency>
+        <dependency>
+            <groupId>com.luo</groupId>
+            <artifactId>hms-provider-ums-api</artifactId>
+            <version>1.0.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.luo</groupId>
+            <artifactId>hms-provider-ums-api</artifactId>
+            <version>1.0.0</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
 </project>

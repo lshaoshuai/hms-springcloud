@@ -16,15 +16,40 @@ spring:
 #      label: master
 #      uri: http://localhost:11113/
 zuul:
+  sensitive-headers: Access-Control-Allow-Origin #需要忽略的头部信息，不在传播到其他服务
+  ignored-headers: Access-Control-Allow-Origin,H-APP-Id,Token,APPToken
+  prefix: /api
   routes:
     api-hotel:
-      path: api-hotel/**
-      service-id: hms-service-hbs #zuul注册到eureka上去发现其它服务，对于同名的微服务会进行负载均衡
-  prefix: /api/
+      path: /hbs/** #会自动将server-id添加
+      service-id: hms-service-hotel #zuul注册到eureka上去发现其它服务，对于同名的微服务会进行负载均衡
+      stripPrefix: true
+      ribbon:
+        eager-load:
+          enabled: true
+    api-stock:
+      path: /ims/**
+      service-id: hms-service-stock #zuul注册到eureka上去发现其它服务，对于同名的微服务会进行负载均衡
+      ribbon:
+        eager-load:
+          enabled: true
+    api-user:
+      path: /ums/**
+      service-id: hms-service-user #zuul注册到eureka上去发现其它服务，对于同名的微服务会进行负载均衡
+      stripPrefix: true
+      ribbon:
+        eager-load:
+          enabled: true
+    api-order:
+      path: /oms/**
+      service-id: hms-service-order #zuul注册到eureka上去发现其它服务，对于同名的微服务会进行负载均衡
+    api-room:
+      path: /rms/**
+      service-id: hms-service-room #zuul注册到eureka上去发现其它服务，对于同名的微服务会进行负载均衡
+    api-employee:
+      path: /ems/**
+      service-id: hms-service-employee #zuul注册到eureka上去发现其它服务，对于同名的微服务会进行负载均衡
 #     uri: http://127.0.0.1:12224/ 通过url直接映射
-ribbon:
-  ConnectTimeout: 500
-  ReadTimeout: 3000
 
 #服务器不用注册到其他服务器
 #eureka:

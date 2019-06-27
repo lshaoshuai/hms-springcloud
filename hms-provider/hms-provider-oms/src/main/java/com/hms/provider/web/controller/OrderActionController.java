@@ -2,9 +2,9 @@ package com.hms.provider.web.controller;
 
 import com.hms.base.dto.UserTokenDto;
 import com.hms.core.support.BaseController;
-import com.hms.provider.dto.OrderDto;
+import com.hms.provider.model.dto.OrderDto;
 import com.hms.provider.service.OmsOrderService;
-import com.hms.provider.vo.OrderVo;
+import com.hms.provider.model.vo.OrderVo;
 import com.hms.wrapper.WrapMapper;
 import com.hms.wrapper.Wrapper;
 import io.swagger.annotations.Api;
@@ -64,15 +64,5 @@ public class OrderActionController extends BaseController {
         }else {
             return WrapMapper.ok(is_success);
         }
-
     }
-
-    @PostMapping("/select/{id}")
-    @ApiOperation(httpMethod = "POST", value = "生成订单信息")
-    public Wrapper selectOrderInfo(){
-
-        logger.info("测试JRebel");
-        return WrapMapper.ok();
-    }
-
 }

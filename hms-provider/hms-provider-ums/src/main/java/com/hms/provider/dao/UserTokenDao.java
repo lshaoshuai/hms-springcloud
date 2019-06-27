@@ -1,6 +1,6 @@
 package com.hms.provider.dao;
 
-import com.hms.provider.dto.UmsTokenDto;
+import com.hms.provider.model.dto.UmsTokenDto;
 import org.apache.ibatis.annotations.Insert;
 
 /**
@@ -14,5 +14,5 @@ public interface UserTokenDao {
 
     @Insert({"insert into user_info (id, phone_num, user_name,user_token) values(#{id}, #{phone_num}, #{user_name}, #{user_token})",
     "ON DUPLICATE KEY UPDATE id = #{id}, phone_num = #{phone_num}, user_name = #{user_name}, user_token = #{user_token}"})
-    void insertUserinfo(UmsTokenDto user);
+    void insertOrUpdateUserinfo(UmsTokenDto user);
 }

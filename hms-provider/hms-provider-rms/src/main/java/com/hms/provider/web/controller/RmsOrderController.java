@@ -2,7 +2,7 @@ package com.hms.provider.web.controller;
 
 import com.hms.core.support.BaseController;
 import com.hms.provider.service.RmsActionService;
-import com.hms.provider.vo.RoomVo;
+import com.hms.provider.model.vo.RoomVo;
 import com.hms.wrapper.WrapMapper;
 import com.hms.wrapper.Wrapper;
 import io.swagger.annotations.Api;

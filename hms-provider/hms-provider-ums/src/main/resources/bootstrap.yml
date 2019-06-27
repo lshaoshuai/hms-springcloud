@@ -1,65 +1,53 @@
 spring:
-  application:
-    # 具体代码调用，请看 \sea-web-shop\src\main\java\pers\zb\web\shop\controller\ShopController.java 中的router方法；
-    name: hms-service-user # 服务提供者的应用服务名称（服务调用者是通过调用此服务名（sea-service-user）来实现服务调用的，与域名和端口号没有关系了）
   cloud:
     config:
       profile: dev
       name: service-user
       label: master
       uri: http://localhost:11113/
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: luoshao
-    password: password
-  redis:
-    host: 127.0.0.1
-    port: 6379
-    timeout: 10
-    password: password
-    pool:
-      # 连接池中的最大空闲连接
-      max-idle: 500
-      # 连接池最大连接数（使用负值表示没有限制）
-      max-active: 1000
-      #  最长等待时间
-      max-wait: -1
+  zipkin:
+    base-url: http://hms-zipkin:9411
+#  sleuth:
+#    sampler:
+#      probability: 1
+eureka:
+  instance:
+    #    prefer-ip-address: true 表示将自己的ip注册到eureka上
+    hostname: localhost # 服务提供者应用所在的主机（本地测试的话，使用localhost或者127.0.0.1即可，或者在host文件中指定一个虚拟域名也可以）
+    lease-renewal-interval-in-seconds: 5 # 心跳时间，表示eureka client发送心跳给eureka server端的频率（缺省为30s）
+  client:
+    service-url:
+      defaultZone: http://server.eureka.slave1.com:18761/eureka,http://server.eureka.slave2.com:28761/eureka # 指定eureka服务器集群列表地址
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 10000
+ribbon:
+  eager-load:
+    enabled: true
+hystrix:
+  propagate:
+    request-attribute:
+      enabled: true
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          #线程池隔离还是信号量隔离 默认是THREAD 信号量是SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 20000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
 
-  datasource:
-    url: jdbc:mysql://localhost:3306/hotel?useUnicode=true&serverTimezone=Asia/Shanghai
-    username: root
-    password: password
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    dbcp2:
-      min-idle: 5         #数据库连接池的最小维持连接数
-      initial-size: 5     #初始化提供的连接数
-      max-total: 5          #最大的连接数
-      max-wait-millis: 200        #等待连接获取的最大超时时间
-  jpa:
-    hibernate:
-      ddl-auto: update            #配置自动建表
-    show-sql: true
-  mail:
-    host: smtp.qq.com
-    username: 1939125539@qq.com #发送方的邮箱
-    password: lzrsxwboabmfbggd #对于qq邮箱而言 密码指的就是发送方的授权码
-    default-encoding: UTF-8
-  smtp:
-    auth: true
-    starttls:
-      enable: true
-      required: true
-#    config:
-#      server:
-#        native:
-#          search-locations: classpath:properties/ # 搜索src/main/resource 下的properties文件夹下的文件
-#  application:
-#    name: service-config
-#  profiles:
-#    active: native  # 配置使用本地储存
-#swagger 配置
-
-
-server:
-  port: 12223

@@ -1,9 +1,9 @@
 package com.hms.provider.service;
 
 import com.hms.core.support.IService;
-import com.hms.provider.dto.CodeDto;
-import com.hms.provider.vo.UserTokenVo;
-import com.hms.provider.vo.UserVo;
+import com.hms.provider.model.dto.CodeDto;
+import com.hms.provider.model.vo.UserTokenVo;
+import com.hms.provider.model.vo.UserVo;
 
 /**
  * @author luoshao
@@ -12,8 +12,6 @@ import com.hms.provider.vo.UserVo;
  * @github https://github.com/lshaoshuai/hms-springcloud
  */
 public interface UmsUserService extends IService<UserVo> {
-
-    public void send();
 
     UserTokenVo createUserToken(CodeDto codedto);
 

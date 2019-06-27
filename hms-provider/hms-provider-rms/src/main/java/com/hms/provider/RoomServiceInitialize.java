@@ -2,7 +2,7 @@ package com.hms.provider;
 
 import com.hms.provider.service.RedisService;
 import com.hms.provider.service.RmsActionService;
-import com.hms.provider.vo.RoomVo;
+import com.hms.provider.model.vo.RoomVo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;

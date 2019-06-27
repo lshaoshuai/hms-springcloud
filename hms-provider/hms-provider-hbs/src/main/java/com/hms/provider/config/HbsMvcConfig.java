@@ -60,7 +60,7 @@ public class  HbsMvcConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         super.addCorsMappings(registry);
-        registry.addMapping("/cors/**")
+        registry.addMapping("/**")
                 .allowedHeaders("*")
                 .allowedMethods("POST","GET")
                 .allowedOrigins("*");

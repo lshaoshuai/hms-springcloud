@@ -1,8 +1,11 @@
 package com.hms.provider.web.controller;
 
 import com.hms.core.support.BaseController;
+import com.hms.provider.model.vo.HotelCountVo;
 import com.hms.provider.model.vo.HotelInfoVo;
 import com.hms.provider.service.HotelQueryService;
+import com.hms.provider.service.OmsFeignApi;
+import com.hms.provider.service.RmsFeignApi;
 import com.hms.wrapper.WrapMapper;
 import com.hms.wrapper.Wrapper;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
@@ -18,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @author luoshao
@@ -34,6 +38,12 @@ public class HbsAppController extends BaseController {
     @Resource
     private HotelQueryService hotelQueryService;
 
+    @Resource
+    private OmsFeignApi omsFeignApi;
+
+    @Resource
+    private RmsFeignApi rmsFeignApi;
+
     @PostMapping("/info/{index}/{offset}")
     @ApiOperation(httpMethod = "POST", value = "返回酒店信息")
     @ApiImplicitParams({
@@ -42,8 +52,8 @@ public class HbsAppController extends BaseController {
     })
     @HystrixCommand(fallbackMethod = "httpError")
     public Wrapper queryHotelInfo(@PathVariable int index,@PathVariable int offset){
-        HotelInfoVo hotelInfoVo = hotelQueryService.getHotelInfo(index,offset);
-        return WrapMapper.ok(hotelInfoVo);
+        List<HotelInfoVo> hotelInfoVos = hotelQueryService.getHotelInfo(index,offset);
+        return WrapMapper.ok(hotelInfoVos);
     }
 
     public Wrapper httpError(int i,int j) {
@@ -56,6 +66,15 @@ public class HbsAppController extends BaseController {
         return WrapMapper.ok();
     }
 
-
+    @PostMapping("/count")
+    @ApiOperation(httpMethod = "POST", value = "获取酒店统计数据")
+    public Wrapper countTotalInfo(){
+        int roomcount = (int)rmsFeignApi.getRoomCount(1).getResult();
+        int hotelcount = (int)omsFeignApi.getOrderCount().getResult();
+        logger.info("roomcount :{} , ordercount: {}" ,roomcount, hotelcount);
+        return WrapMapper.ok(
+                new HotelCountVo(roomcount,0,0,hotelcount)
+        );
+    }
 
 }

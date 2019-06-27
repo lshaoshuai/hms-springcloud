@@ -20,6 +20,21 @@
     </modules>
     <dependencies>
         <dependency>
+            <groupId>com.luo</groupId>
+            <artifactId>hms-common-util</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.luo</groupId>
+            <artifactId>hms-common-base</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.luo</groupId>
+            <artifactId>hms-common-core</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-feign</artifactId>
         </dependency>

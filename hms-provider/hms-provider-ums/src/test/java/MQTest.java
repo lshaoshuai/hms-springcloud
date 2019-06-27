@@ -1,6 +1,5 @@
 import com.hms.UmsServiceApplication;
 import com.hms.provider.service.UmsUserService;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,8 +18,4 @@ public class MQTest {
     @Autowired
     private UmsUserService helloSender;
 
-    @Test
-    public void testRabbit() {
-        helloSender.send();
-    }
 }

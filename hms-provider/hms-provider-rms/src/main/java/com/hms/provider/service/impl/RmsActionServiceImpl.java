@@ -2,10 +2,10 @@ package com.hms.provider.service.impl;
 
 import com.hms.core.support.BaseService;
 import com.hms.provider.dao.RoomInfoDao;
-import com.hms.provider.domain.RoomInfo;
+import com.hms.provider.model.domain.RoomInfo;
 import com.hms.provider.service.RedisService;
 import com.hms.provider.service.RmsActionService;
-import com.hms.provider.vo.RoomVo;
+import com.hms.provider.model.vo.RoomVo;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,7 +35,7 @@ public class RmsActionServiceImpl extends BaseService implements RmsActionServic
     public List<RoomVo> getRoomsInfo(int hotel_id){
 
         logger.info("获取到的宾馆ID为{}",hotel_id);
-        List<RoomInfo> roomInfos = roomInfoDao.queryRoomInfo(hotel_id);
+        List<RoomInfo> roomInfos = roomInfoDao.queryRoomInfoByHotelId(hotel_id);
         RoomVo[] roomVos = new ModelMapper().map(roomInfos, RoomVo[].class);
         List<RoomVo> roomVoList = new ArrayList<>();
         for(RoomVo roomVo : roomVos) {
@@ -48,7 +48,7 @@ public class RmsActionServiceImpl extends BaseService implements RmsActionServic
     public List<RoomVo> getRoomsCountInfo(int hotel_id){
 
         logger.info("获取到的宾馆ID为{}",hotel_id);
-        List<RoomInfo> roomInfos = roomInfoDao.queryRoomInfo(hotel_id);
+        List<RoomInfo> roomInfos = roomInfoDao.queryRoomInfoByHotelId(hotel_id);
         RoomVo[] roomVos = new ModelMapper().map(roomInfos, RoomVo[].class);
         List<RoomVo> roomVoList = new ArrayList<>();
         for(RoomVo roomVo : roomVos) {
@@ -63,5 +63,18 @@ public class RmsActionServiceImpl extends BaseService implements RmsActionServic
 
         logger.info("获取到的宾馆ID为{}",room_id);
         return (int)redisService.getKey(REDIS_ROOM_STOCK + room_id);
+    }
+
+    /**
+     * 返回房间类型列表
+     * @param hotelid
+     * @return
+     */
+    @Override
+    public List<String> roomTypeList(int hotelid){
+
+        List<String> roomtypelist = roomInfoDao.getRoomTypeList(hotelid);
+        return roomtypelist;
+
     }
 }

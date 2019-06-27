@@ -2,9 +2,9 @@ package com.hms.provider.web.controller;
 
 import com.hms.core.annotation.IsMobile;
 import com.hms.core.support.BaseController;
-import com.hms.provider.dto.CodeDto;
+import com.hms.provider.model.dto.CodeDto;
 import com.hms.provider.service.UmsUserService;
-import com.hms.provider.vo.UserTokenVo;
+import com.hms.provider.model.vo.UserTokenVo;
 import com.hms.wrapper.WrapMapper;
 import com.hms.wrapper.Wrapper;
 import io.swagger.annotations.Api;

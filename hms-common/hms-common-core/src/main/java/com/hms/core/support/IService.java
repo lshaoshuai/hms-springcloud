@@ -10,5 +10,4 @@ package com.hms.core.support;
 public interface IService<T> {
 
 
-
 }

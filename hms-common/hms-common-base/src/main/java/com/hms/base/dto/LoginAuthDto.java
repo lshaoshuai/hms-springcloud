@@ -14,7 +14,10 @@ import java.io.Serializable;
 @Data
 @ApiModel(value = "登录人信息")
 public class LoginAuthDto implements Serializable {
-    private static final long serialVersionUID = -1137852221455042256L;
+
+
+    private static final long serialVersionUID = 6043052982047296792L;
+
     @ApiModelProperty(value = "用户ID")
     private Long userId;
     @ApiModelProperty(value = "登录名")

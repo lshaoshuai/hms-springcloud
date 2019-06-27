@@ -21,7 +21,7 @@ public class HbsServiceApplication {
          */
 
         System.out.println("================================================== 开始启动 hbs 服务 =============================================================");
-        System.out.println("请在控制台指定user服务的端口号 —— [端口号随意指定，注意不要与本机端口号出现冲突即可]");
+        System.out.println("请在控制台指定hbs服务的端口号 —— [端口号随意指定，注意不要与本机端口号出现冲突即可]");
         Scanner scanner = new Scanner(System.in);
         String port = scanner.nextLine(); //让用户指定端口号
         new SpringApplicationBuilder(HbsServiceApplication.class).properties("server.port=" + port).run(args);//启动项目

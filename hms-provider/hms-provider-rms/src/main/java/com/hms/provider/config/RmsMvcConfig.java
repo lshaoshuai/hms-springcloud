@@ -5,10 +5,7 @@ import com.hms.core.interceptor.TokenInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -45,6 +42,19 @@ public class RmsMvcConfig extends WebMvcConfigurerAdapter {
         registry.addInterceptor(vueViewInterceptor)
                 .addPathPatterns("/**")
                 .excludePathPatterns("/pay/alipayCallback", "/swagger-resources/**", "*.js", "/**/*.js", "*.css", "/**/*.css", "*.html", "/**/*.html");
+    }
+
+    /**
+     * 跨域
+     * @param registry
+     */
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        super.addCorsMappings(registry);
+        registry.addMapping("/**")
+                .allowedHeaders("*")
+                .allowedMethods("POST","GET")
+                .allowedOrigins("*");
     }
 
 }

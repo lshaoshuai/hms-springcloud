@@ -2,7 +2,7 @@ package com.hms.provider.util;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
-import com.hms.provider.dto.CodeDto;
+import com.hms.provider.model.dto.CodeDto;
 
 /**
  * @author luoshao
@@ -15,6 +15,12 @@ public class JwtToken {
     public static String getCodeToken(CodeDto codedto) {
         String token = "";
         token = JWT.create().withAudience(String.valueOf(codedto.getPhone_num())).sign(Algorithm.HMAC256(String.valueOf(codedto.getPhone_num())));
+        return token;
+    }
+
+    public static String getUserToken(String username,String password) {
+        String token = "";
+        token = JWT.create().withAudience(String.valueOf(username)).sign(Algorithm.HMAC256(String.valueOf(password)));
         return token;
     }
 }

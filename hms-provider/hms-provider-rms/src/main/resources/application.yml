@@ -1,0 +1,49 @@
+spring:
+  application:
+    # 具体代码调用，请看 \sea-web-shop\src\main\java\pers\zb\web\shop\controller\ShopController.java 中的router方法；
+    name: hms-service-room # 服务提供者的应用服务名称（服务调用者是通过调用此服务名（sea-service-user）来实现服务调用的，与域名和端口号没有关系了）
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: luoshao
+    password: password
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 10
+    password: password
+    pool:
+      # 连接池中的最大空闲连接
+      max-idle: 500
+      # 连接池最大连接数（使用负值表示没有限制）
+      max-active: 1000
+      #  最长等待时间
+      max-wait: -1
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/hotel?useUnicode=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #----durid info ---
+    type: com.alibaba.druid.pool.DruidDataSource
+    dbcp2:
+      min-idle: 5         #数据库连接池的最小维持连接数
+      initial-size: 5     #初始化提供的连接数
+      max-total: 5          #最大的连接数
+      max-wait-millis: 200        #等待连接获取的最大超时时间
+  jpa:
+    hibernate:
+      ddl-auto: update            #配置自动建表
+    show-sql: true
+
+hms:
+  token:
+    interceptor:
+      enable: true
+  oauth2:
+    jwtSigningKey: paascloud
+
+
+server:
+  port: 12222

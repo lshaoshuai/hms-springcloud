@@ -6,13 +6,13 @@ import com.hms.RedisKeyUtil;
 import com.hms.base.dto.UserTokenDto;
 import com.hms.core.support.BaseService;
 import com.hms.provider.dao.UserTokenDao;
-import com.hms.provider.dto.CodeDto;
-import com.hms.provider.dto.UmsTokenDto;
+import com.hms.provider.model.dto.CodeDto;
+import com.hms.provider.model.dto.UmsTokenDto;
 import com.hms.provider.service.RedisService;
 import com.hms.provider.service.UmsUserService;
 import com.hms.provider.util.JwtToken;
-import com.hms.provider.vo.UserTokenVo;
-import com.hms.provider.vo.UserVo;
+import com.hms.provider.model.vo.UserTokenVo;
+import com.hms.provider.model.vo.UserVo;
 import org.modelmapper.ModelMapper;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,9 +45,6 @@ public class UmsUserServiceImpl extends BaseService<UserVo> implements UmsUserSe
     @Resource
     RedisService redisService;
 
-    public void send() {
-        template.convertAndSend("queue","hello,rabbit~");
-    }
 
     /**
      * 创建Token
@@ -63,14 +60,14 @@ public class UmsUserServiceImpl extends BaseService<UserVo> implements UmsUserSe
         Preconditions.checkArgument(redisService.getKey(VERIFY_CODE + codedto.getPhone_num()).equals(String.valueOf(codedto.getVerifyCode())),"验证码错误");
         String token = JwtToken.getCodeToken(codedto);
 
-        UmsTokenDto userTokenDto= new UmsTokenDto();
-        userTokenDto.setId(RadomUtil.createRadomID());
-        userTokenDto.setPhone_num(codedto.getPhone_num());
-        userTokenDto.setUser_name(RadomUtil.createRadomUserName());
-        userTokenDto.setUser_token(token);
-        userTokenDao.insertUserinfo(userTokenDto);
+        UmsTokenDto umsTokenDto = new UmsTokenDto();
+        umsTokenDto.setId(RadomUtil.createRadomID());
+        umsTokenDto.setPhone_num(codedto.getPhone_num());
+        umsTokenDto.setUser_name(RadomUtil.createRadomUserName());
+        umsTokenDto.setUser_token(token);
+        userTokenDao.insertOrUpdateUserinfo(umsTokenDto);
         //ModelMapper负责将DO和DTO来回转换
-        UserTokenDto userdto = new ModelMapper().map(userTokenDto, UserTokenDto.class);
+        UserTokenDto userdto = new ModelMapper().map(umsTokenDto, UserTokenDto.class);
         redisService.setKey(TOKEN_CODE + codedto.getPhone_num(),token,10, TimeUnit.HOURS);
         redisService.setKey(token, userdto,10, TimeUnit.HOURS);
         logger.info("userdto{}",userdto);

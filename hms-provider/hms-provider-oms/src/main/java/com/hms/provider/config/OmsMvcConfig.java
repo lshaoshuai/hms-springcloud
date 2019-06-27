@@ -6,7 +6,6 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
@@ -39,12 +38,12 @@ public class OmsMvcConfig extends WebMvcConfigurerAdapter {
      *
      * @param registry the registry
      */
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        super.addInterceptors(registry);
-        registry.addInterceptor(vueViewInterceptor)
-                .addPathPatterns("/**")
-                .excludePathPatterns("/pay/alipayCallback", "/swagger-resources/**", "*.js", "/**/*.js", "*.css", "/**/*.css", "*.html", "/**/*.html");
-    }
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
+//        super.addInterceptors(registry);
+//        registry.addInterceptor(vueViewInterceptor)
+//                .addPathPatterns("/**")
+//                .excludePathPatterns("/pay/alipayCallback", "/swagger-resources/**", "*.js", "/**/*.js", "*.css", "/**/*.css", "*.html", "/**/*.html");
+//    }
 
 }

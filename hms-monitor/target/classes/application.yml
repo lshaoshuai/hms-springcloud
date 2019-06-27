@@ -10,7 +10,7 @@ eureka:
       defaultZone: http://server.eureka.slave1.com:18761/eureka,http://ser ver.eureka.slave2.com:28761/eureka # 指定eureka服务器集群列表地址
 
 turbine:
-  app-config: hms-service-hbs # 指定要监控的应用名字；这里我就监控当前的消费者应用了
+  app-config: hms-service-hotel,hms-service-order,hms-service-room,hms-service-user # 指定要监控的应用名字；这里我就监控当前的消费者应用了
   cluster-name-expression: new String("default") # 集群的名字
   combine-host-port: true # 表示同一主机上的服务通过host和port的组合来进行区分，默认情况下是使用host来区分，这样会使本地调试有问题
 

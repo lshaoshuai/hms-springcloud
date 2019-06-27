@@ -1,7 +1,6 @@
 package com.hms.provider.service;
 
 import com.hms.core.support.IService;
-import com.hms.provider.vo.RoomVo;
 
 /**
  * @author luoshao
