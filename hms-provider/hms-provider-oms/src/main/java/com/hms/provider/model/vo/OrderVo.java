@@ -15,11 +15,16 @@ import java.sql.Date;
 public class OrderVo implements Serializable {
 
     private static final long serialVersionUID = 6123862096125274292L;
+
     private int id;
 
     private double collection_price;
 
     private int order_id;
+
+    private int hotel_id;
+
+    private int room_id;
 
     private String user_id;
 

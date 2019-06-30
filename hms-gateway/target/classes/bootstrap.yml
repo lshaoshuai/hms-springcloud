@@ -32,7 +32,7 @@ zuul:
       service-id: hms-service-stock #zuul注册到eureka上去发现其它服务，对于同名的微服务会进行负载均衡
       ribbon:
         eager-load:
-          enabled: true
+          enabled: false
     api-user:
       path: /ums/**
       service-id: hms-service-user #zuul注册到eureka上去发现其它服务，对于同名的微服务会进行负载均衡
@@ -46,9 +46,9 @@ zuul:
     api-room:
       path: /rms/**
       service-id: hms-service-room #zuul注册到eureka上去发现其它服务，对于同名的微服务会进行负载均衡
-    api-employee:
-      path: /ems/**
-      service-id: hms-service-employee #zuul注册到eureka上去发现其它服务，对于同名的微服务会进行负载均衡
+    api-manager:
+      path: /mms/**
+      service-id: hms-service-manager #zuul注册到eureka上去发现其它服务，对于同名的微服务会进行负载均衡
 #     uri: http://127.0.0.1:12224/ 通过url直接映射
 
 #服务器不用注册到其他服务器

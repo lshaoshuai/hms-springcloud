@@ -16,7 +16,16 @@ import java.io.Serializable;
 public class UserTokenVo implements Serializable {
 
     private static final long serialVersionUID = -549712177817934136L;
+
+    private long id;
+
     private String phone_num;
 
-    private String acesstoken;
+    private String user_name;
+
+    private String user_id;
+
+    private String email;
+
+    private String accesstoken;
 }

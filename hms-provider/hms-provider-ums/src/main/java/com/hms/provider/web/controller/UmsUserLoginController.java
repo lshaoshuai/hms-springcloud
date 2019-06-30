@@ -106,7 +106,7 @@ public class UmsUserLoginController extends BaseController {
     @PostMapping("/checkcode/{verifycode}")
     @ApiOperation(httpMethod = "POST", value = "校验验证码")
     @ApiImplicitParam(name = "verifycode", value = "验证码", required = true, dataType = "int", paramType = "path")
-    public Wrapper checkInteriorLogin(@RequestBody int verifycode) {
+    public Wrapper checkInteriorLogin(@PathVariable int verifycode) {
         logger.info("获取用户请求验证码. verifycode={}" ,verifycode);
         return WrapMapper.ok();
     }

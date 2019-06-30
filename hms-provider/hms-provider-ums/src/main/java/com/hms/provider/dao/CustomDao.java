@@ -12,7 +12,8 @@ import org.apache.ibatis.annotations.Select;
  */
 public interface CustomDao {
 
-    @Insert("insert into customer_info (id,phone,user_id,username) values (#{id},#{phone},#{user_id},#{username})")
+    @Insert({"insert into customer_info (phone,user_id,username) values (#{phone},#{user_id},#{username})",
+    "ON DUPLICATE KEY UPDATE phone = #{phone}, username = #{username}, user_id = #{user_id}"})
     int insertCustomerInfo(CustomerDo customerDo);
 
     @Select("select * from customer_info where user_id = #{userid}")

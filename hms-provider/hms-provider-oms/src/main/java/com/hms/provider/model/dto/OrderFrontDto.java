@@ -16,7 +16,7 @@ public class OrderFrontDto implements Serializable {
 
     private static final long serialVersionUID = 5883218181966449929L;
 
-    private String userid;
+    private String userId;
 
     private String username;
 
@@ -30,6 +30,6 @@ public class OrderFrontDto implements Serializable {
 
     private int checkInStatus;
 
-    private int roomid;
+    private int roomId;
 
 }

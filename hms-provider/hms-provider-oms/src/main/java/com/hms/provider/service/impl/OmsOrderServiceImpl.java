@@ -1,19 +1,24 @@
 package com.hms.provider.service.impl;
 
+import com.google.common.base.Preconditions;
 import com.hms.RadomUtil;
 import com.hms.base.constant.GlobalConstant;
 import com.hms.core.support.BaseService;
 import com.hms.provider.dao.OrderDao;
 import com.hms.provider.model.domain.OrderInfo;
 import com.hms.provider.model.dto.OrderDto;
+import com.hms.provider.model.dto.OrderFrontDto;
+import com.hms.provider.model.vo.OrderVo;
+import com.hms.provider.service.OmsFeignApi;
 import com.hms.provider.service.OmsOrderService;
 import com.hms.provider.service.RedisService;
-import com.hms.provider.model.vo.OrderVo;
+import com.hms.provider.service.RmsFeignApi;
 import org.modelmapper.ModelMapper;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.amqp.utils.SerializationUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.amqp.utils.SerializationUtils;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.sql.Date;
@@ -41,6 +46,11 @@ public class OmsOrderServiceImpl extends BaseService implements OmsOrderService 
     @Resource
     RedisService redisService;
 
+    @Autowired
+    OmsFeignApi omsFeignApi;
+
+    @Autowired
+    RmsFeignApi rmsFeignApi;
 
     @Autowired
     private OrderDao orderDao;
@@ -65,8 +75,8 @@ public class OmsOrderServiceImpl extends BaseService implements OmsOrderService 
             return "";
         }
         OrderInfo orderInfo = new OrderInfo();
-//            orderInfo.setOrder_id(RadomUtil.createRadomID() + "");
         orderInfo.setHotel_name(orderdto.getHotel_name());
+        orderInfo.setHotel_id(orderdto.getHotel_id());
         orderInfo.setUser_id(orderdto.getUser_id());
         orderInfo.setOrder_set_time(new Date(System.currentTimeMillis()));
         orderInfo.setRoom_in_time(orderdto.getRoom_in_time());
@@ -99,14 +109,25 @@ public class OmsOrderServiceImpl extends BaseService implements OmsOrderService 
         return orderInfo.getOrder_id();
     }
 
-
-
-    public boolean commitOrder(int order_id,int room_id,long mobile){
+    @Transactional
+    public boolean commitOrder(int order_id,int room_id,String room_name,String mobile){
         logger.info("更新订单状态:{}",order_id);
         //还需要删除ORDER_HASH_KEY
         redisService.deleteKey(ORDER_HASH_KEY + room_id + mobile);
         redisService.deleteKey(ORDER_ID + order_id);
         orderDao.updateOrderInfo(1,order_id);
+        OrderInfo orderInfo = orderDao.queryByOrderID(order_id + "");
+        OrderFrontDto orderFrontDto = new OrderFrontDto();
+        orderFrontDto.setRoomId((int)rmsFeignApi.getRandomRoom(room_name).getResult()); //随机获取客房
+        orderFrontDto.setUserId(orderInfo.getUser_id());
+        orderFrontDto.setCheckIn(orderInfo.getRoom_in_time());
+        orderFrontDto.setCheckOut(orderInfo.getRoom_out_time());
+        orderFrontDto.setCheckInStatus(1);
+        orderFrontDto.setOrigin("妹团订购单");
+        orderFrontDto.setUsername(mobile +"");
+        orderFrontDto.setPhone(mobile + "");
+        boolean is_success = (boolean)omsFeignApi.commitLocalOrder(orderFrontDto).getResult();
+        Preconditions.checkArgument(is_success,"向酒店提交订单失败");
         return true;
     }
 

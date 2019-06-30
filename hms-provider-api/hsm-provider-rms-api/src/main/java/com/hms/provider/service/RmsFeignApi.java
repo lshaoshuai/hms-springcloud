@@ -31,5 +31,17 @@ public interface RmsFeignApi {
 
     @PostMapping(value =  "/rpc/local/update")
     @NoNeedAccessAuthentication
-    Wrapper updateLocalRoomInfo(@RequestParam("id") int roomid,@RequestParam("id") int status);
+    Wrapper updateLocalRoomInfo(@RequestParam("roomId") int roomId,@RequestParam("checkInStatus") int checkInStatus);
+
+    @GetMapping(value =  "/rpc/local/dynamic/cout")
+    @NoNeedAccessAuthentication
+    Wrapper getEmptyRoomCount(@RequestParam("hotelid") int hotelid,@RequestParam("status") int status,@RequestParam("type") String type,@RequestParam("value") String value);
+
+    @GetMapping(value =  "/rpc/local/price")
+    @NoNeedAccessAuthentication
+    Wrapper getRoomPrice(@RequestParam("roomid") int roomid);
+
+    @GetMapping(value =  "/rpc/local/random")
+    @NoNeedAccessAuthentication
+    Wrapper getRandomRoom(@RequestParam("roomname") String roomname);
 }

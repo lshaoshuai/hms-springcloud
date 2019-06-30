@@ -1,12 +1,16 @@
 package com.hms.provider.config;
 
 import com.hms.core.config.SwaggerConfiguration;
+import com.hms.core.interceptor.TokenInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+import javax.annotation.Resource;
 
 /**
  * @author luoshao
@@ -25,6 +29,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @Import(SwaggerConfiguration.class) //引入配置类
 @MapperScan(basePackages = {"com.hms.provider.dao"}) //扫描Mapper包的路径
 public class  HbsMvcConfig extends WebMvcConfigurerAdapter {
+
+
+    @Resource
+    private TokenInterceptor vueViewInterceptor;
 
 //    /** 解决跨域问题 **/
 //    public void addCorsMappings(CorsRegistry registry) ;
@@ -51,6 +59,14 @@ public class  HbsMvcConfig extends WebMvcConfigurerAdapter {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/**")
                 .addResourceLocations("classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/","classpath:/META-INF/resources/webjars");
+    }
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        super.addInterceptors(registry);
+        registry.addInterceptor(vueViewInterceptor)
+                .addPathPatterns("/**")
+                .excludePathPatterns("/pay/alipayCallback", "/swagger-resources/**", "*.js", "/**/*.js", "*.css", "/**/*.css", "*.html", "/**/*.html");
     }
 
     /**

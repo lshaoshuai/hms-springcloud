@@ -42,7 +42,7 @@ hms:
     interceptor:
       enable: true
   oauth2:
-    jwtSigningKey: paascloud
+    jwtSigningKey: hmscloud
 
 
 server:

@@ -17,8 +17,8 @@ public interface OrderDao {
     List<OrderInfo> queryFromOrderInfo(@Param("user_id") String user_id);
 
     @Insert("insert into order_info(id,collection_price,hotel_name,order_id,order_set_time,pay_status,room_count,room_in_time,room_name" +
-            ",room_out_time,user_id,room_id) values(#{id},#{collection_price},#{hotel_name},#{order_id},#{order_set_time},#{pay_status}," +
-            "#{room_count},#{room_in_time},#{room_name},#{room_out_time},#{user_id},#{room_id})")
+            ",room_out_time,user_id,room_id,hotel_id) values(#{id},#{collection_price},#{hotel_name},#{order_id},#{order_set_time},#{pay_status}," +
+            "#{room_count},#{room_in_time},#{room_name},#{room_out_time},#{user_id},#{room_id},#{hotel_id})")
     void insertOrderInfo(OrderInfo orderInfo);
 
     @Update("update order_info set pay_status = #{pay_status} where order_id = #{order_id}")

@@ -16,6 +16,7 @@
         <module name="hms-monitor" />
         <module name="hms-provider-hbs" />
         <module name="hms-provider-hbs-api" />
+        <module name="hms-provider-mms" />
         <module name="hms-provider-oms" />
         <module name="hms-provider-oms-api" />
         <module name="hms-provider-rms" />
@@ -45,6 +46,7 @@
       <module name="hms-monitor" options="-nowarn" />
       <module name="hms-provider-hbs" options="-nowarn" />
       <module name="hms-provider-hbs-api" options="-nowarn" />
+      <module name="hms-provider-mms" options="-nowarn" />
       <module name="hms-provider-oms" options="-nowarn" />
       <module name="hms-provider-oms-api" options="-nowarn" />
       <module name="hms-provider-rms" options="-nowarn" />

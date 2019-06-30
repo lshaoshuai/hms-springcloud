@@ -54,4 +54,7 @@ public class OrderInfo implements Serializable {
 
     @Column(name = "room_id")
     private int room_id;
+
+    @Column(name = "hotel_id")
+    private int hotel_id;
 }

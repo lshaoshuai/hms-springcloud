@@ -24,10 +24,23 @@ public class RmsFeignHystrix implements RmsFeignApi {
 
         return null;
     }
-
     @Override
-    public Wrapper updateLocalRoomInfo(final int roomid,final int status){
+    public Wrapper updateLocalRoomInfo(final int roomId,final int checkInStatus){
         return null;
     }
 
+    @Override
+    public Wrapper getEmptyRoomCount(final int hotelid, final int status, final String type, final String value){
+        return null;
+    }
+
+    @Override
+    public Wrapper getRoomPrice(final int roomid){
+        return null;
+    }
+
+    @Override
+    public Wrapper getRandomRoom(final String roomname){
+        return null;
+    }
 }

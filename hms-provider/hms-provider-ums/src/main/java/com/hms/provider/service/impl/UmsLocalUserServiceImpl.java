@@ -65,7 +65,7 @@ public class UmsLocalUserServiceImpl implements UmsLocalUserService {
         customerDo.setUsername(customerDto.getUsername());
         customerDo.setUser_id(customerDto.getUserId());
         int line = customerDao.insertCustomerInfo(customerDo);
-        if(line > 0){
+        if(line >= 0){
             return true;
         }else{
             return false;

@@ -47,4 +47,13 @@ public class HotelInfo {
     @Column(name = "commuser_num")
     private String commuser_num;
 
+    @Column(name = "hotel_price")
+    private String hotel_price;
+
+    @Column(name = "city")
+    private String city;
+
+    @Column(name = "favorite")
+    private boolean favorite;
+
 }

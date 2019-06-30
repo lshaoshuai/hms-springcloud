@@ -2,6 +2,7 @@ package com.hms.provider.web.controller;
 
 import com.hms.annotation.NoNeedAccessAuthentication;
 import com.hms.core.support.BaseController;
+import com.hms.provider.dao.LocalRoomDao;
 import com.hms.provider.model.dto.LocalRoomDto;
 import com.hms.provider.model.dto.SearchRoomDto;
 import com.hms.provider.model.dto.StatusRoomDto;
@@ -14,6 +15,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,6 +36,9 @@ public class RmsLocalController extends BaseController {
 
     @Resource
     RmsLocalService rmsLocalService;
+
+    @Autowired
+    LocalRoomDao localRoomDao;
 
     @Resource
     RmsFeignApi rmsFeignApi;
@@ -93,11 +98,11 @@ public class RmsLocalController extends BaseController {
     public Wrapper searchRoomList(@RequestBody SearchRoomDto searchRoomDto) {
         logger.info("获取到查询请求信息 = {}", searchRoomDto);
         List<LocalRoomVo>  localRoomVos = rmsLocalService.getRoomByDynamic(searchRoomDto);
-        return WrapMapper.ok(new LimitRoomVo(searchRoomDto.getPageNum(),searchRoomDto.getPageSize(),(int)rmsFeignApi.getRoomCount(1).getResult(),localRoomVos));
+        return WrapMapper.ok(new LimitRoomVo(searchRoomDto.getPageNum(),searchRoomDto.getPageSize(),localRoomDao.queryDynamicRoomTotal(searchRoomDto.getType(),searchRoomDto.getValue()),localRoomVos));
     }
 
     @PostMapping("/remove/{id}")
-    @ApiOperation(httpMethod = "POST", value = "根据房间ID删除客服信息")
+    @ApiOperation(httpMethod = "POST", value = "根据房间ID删除客房信息")
     @NoNeedAccessAuthentication
     public Wrapper removeLoacalRoomInfo(@PathVariable int id) {
 

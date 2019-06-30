@@ -12,11 +12,18 @@ import java.io.Serializable;
 //@EqualsAndHashCode(callSuper = true)
 @Data
 public class UserTokenDto implements Serializable {
-	private static final long serialVersionUID = 3136723742371575367L;
+
+	private static final long serialVersionUID = 6754402470518968274L;
 
 	private long id;
 
-	private long phone_num;
+	private String phone_num;
 
-	private String user_token;
+	private String user_name;
+
+	private String user_id;
+
+	private String email;
+
+	private String accesstoken;
 }

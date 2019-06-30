@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: hms-service-manager
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/manager?serverTimezone=Asia/Shanghai
+    username: root
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update            #配置自动建表
+    show-sql: true
+
+server:
+  port: 12228

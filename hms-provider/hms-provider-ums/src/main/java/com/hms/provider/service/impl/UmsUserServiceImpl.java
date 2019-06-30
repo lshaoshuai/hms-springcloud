@@ -1,25 +1,25 @@
 package com.hms.provider.service.impl;
 
 import com.google.common.base.Preconditions;
-import com.hms.RadomUtil;
 import com.hms.RedisKeyUtil;
 import com.hms.base.dto.UserTokenDto;
 import com.hms.core.support.BaseService;
+import com.hms.provider.dao.UserDao;
 import com.hms.provider.dao.UserTokenDao;
+import com.hms.provider.model.domain.UserDo;
 import com.hms.provider.model.dto.CodeDto;
-import com.hms.provider.model.dto.UmsTokenDto;
+import com.hms.provider.model.vo.UserTokenVo;
+import com.hms.provider.model.vo.UserVo;
 import com.hms.provider.service.RedisService;
 import com.hms.provider.service.UmsUserService;
 import com.hms.provider.util.JwtToken;
-import com.hms.provider.model.vo.UserTokenVo;
-import com.hms.provider.model.vo.UserVo;
 import org.modelmapper.ModelMapper;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 import static com.hms.base.constant.GlobalConstant.User.TOKEN_CODE;
@@ -42,6 +42,9 @@ public class UmsUserServiceImpl extends BaseService<UserVo> implements UmsUserSe
     @Autowired
     UserTokenDao userTokenDao;
 
+    @Autowired
+    UserDao userDao;
+
     @Resource
     RedisService redisService;
 
@@ -52,28 +55,38 @@ public class UmsUserServiceImpl extends BaseService<UserVo> implements UmsUserSe
      * @return
      */
     @Override
-    @Transactional
     public UserTokenVo createUserToken(CodeDto codedto){
 
         logger.info("获取到用户的手机和验证码为,mobile={} , code={}",codedto.getPhone_num(),codedto.getVerifyCode());
-        Preconditions.checkNotNull(redisService.getKey(VERIFY_CODE + codedto.getPhone_num()),"不存在该手机号码");
-        Preconditions.checkArgument(redisService.getKey(VERIFY_CODE + codedto.getPhone_num()).equals(String.valueOf(codedto.getVerifyCode())),"验证码错误");
-        String token = JwtToken.getCodeToken(codedto);
+        UserDo user = userDao.selectUserInfoByMobile(codedto.getPhone_num());
+        //如果数据库中不存在该用户的数据,则创建用户
+        String token = "";
+        if(user == null){
 
-        UmsTokenDto umsTokenDto = new UmsTokenDto();
-        umsTokenDto.setId(RadomUtil.createRadomID());
-        umsTokenDto.setPhone_num(codedto.getPhone_num());
-        umsTokenDto.setUser_name(RadomUtil.createRadomUserName());
-        umsTokenDto.setUser_token(token);
-        userTokenDao.insertOrUpdateUserinfo(umsTokenDto);
-        //ModelMapper负责将DO和DTO来回转换
-        UserTokenDto userdto = new ModelMapper().map(umsTokenDto, UserTokenDto.class);
-        redisService.setKey(TOKEN_CODE + codedto.getPhone_num(),token,10, TimeUnit.HOURS);
-        redisService.setKey(token, userdto,10, TimeUnit.HOURS);
-        logger.info("userdto{}",userdto);
-        UserTokenVo userTokenVo = new UserTokenVo();
-        userTokenVo.setPhone_num(codedto.getPhone_num());
-        userTokenVo.setAcesstoken(token);
+            user = new UserDo();
+            user.setId(generateId());
+            user.setPhone_num(codedto.getPhone_num());
+            user.setUser_name(UUID.randomUUID().toString().replaceAll("-", ""));
+            user.setEmail("1939125539@qq.com");
+            user.setUser_id("400230103123123");
+            logger.info("创建了用户： {}",user);
+            userDao.insertOrUpdateUserinfo(user);
+            token = JwtToken.getCodeToken(codedto);
+            UserTokenDto userTokenDto = new ModelMapper().map(user, UserTokenDto.class);
+            redisService.setKey(TOKEN_CODE + codedto.getPhone_num(),token,10, TimeUnit.HOURS);
+            redisService.setKey(token, userTokenDto,10, TimeUnit.HOURS);
+
+
+        }else{
+//            Preconditions.checkNotNull(redisService.getKey(VERIFY_CODE + codedto.getPhone_num()),"该手机号码登陆过期");
+            Preconditions.checkArgument(redisService.getKey(VERIFY_CODE + codedto.getPhone_num()).equals(String.valueOf(codedto.getVerifyCode())),"验证码错误");
+            token = JwtToken.getCodeToken(codedto);
+            UserTokenDto userTokenDto = new ModelMapper().map(user, UserTokenDto.class);
+            redisService.setKey(TOKEN_CODE + codedto.getPhone_num(),token,10, TimeUnit.HOURS);
+            redisService.setKey(token, userTokenDto,10, TimeUnit.HOURS);
+        }
+        UserTokenVo userTokenVo = new ModelMapper().map(user , UserTokenVo.class);
+        userTokenVo.setAccesstoken(token);
         return userTokenVo;
     }
 

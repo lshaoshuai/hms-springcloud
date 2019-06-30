@@ -20,10 +20,6 @@ public class CustomerDo implements Serializable {
     private static final long serialVersionUID = -6992807905303871635L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-
-    @Column(name = "user_id")
     private String user_id;
 
     @Column(name = "username")

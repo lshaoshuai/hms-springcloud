@@ -1,6 +1,7 @@
 package com.hms.provider.service;
 
 import com.hms.core.support.IService;
+import com.hms.provider.model.dto.SearchHotelDto;
 import com.hms.provider.model.vo.HotelInfoVo;
 
 import java.util.List;
@@ -13,6 +14,11 @@ import java.util.List;
  */
 public interface HotelQueryService extends IService{
 
-    List<HotelInfoVo> getHotelInfo(int index, int offset);
+    List<HotelInfoVo> getHotelInfoList(int index, int offset);
+
+    HotelInfoVo getHotelInfo(int hotelid);
+
     int getHotelFloorInfo(int hotelid);
+
+    List<HotelInfoVo> getHotelByDynamic(SearchHotelDto searchHotelDto);
 }

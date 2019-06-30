@@ -35,3 +35,10 @@ spring:
     hibernate:
       ddl-auto: update            #配置自动建表
     show-sql: true
+
+hms:
+  token:
+    interceptor:
+      enable: true
+  oauth2:
+    jwtSigningKey: hmscloud

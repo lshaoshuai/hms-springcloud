@@ -1,5 +1,6 @@
 package com.hms.provider.web.rpc;
 
+import com.hms.annotation.NoNeedAccessAuthentication;
 import com.hms.core.support.BaseController;
 import com.hms.provider.service.HbsFeignApi;
 import com.hms.provider.service.HotelQueryService;
@@ -33,6 +34,7 @@ public class HbsFeignClient extends BaseController implements HbsFeignApi {
 
     @GetMapping("/floor")
     @ApiOperation(httpMethod = "GET", value = "获取酒店楼层数")
+    @NoNeedAccessAuthentication
     public Wrapper getFloorById(@RequestParam("hotelid") int hotelid){
         int floor = hotelQueryService.getHotelFloorInfo(hotelid);
         logger.info("获取到的楼层数为：{}", floor);

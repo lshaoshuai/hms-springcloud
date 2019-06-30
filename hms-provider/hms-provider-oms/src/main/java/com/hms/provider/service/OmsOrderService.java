@@ -16,5 +16,5 @@ public interface OmsOrderService extends IService {
 
     String createOrderInfo(OrderDto orderDto) throws Exception;
 
-    boolean commitOrder(int order_id,int room_id,long mobile);
+    boolean commitOrder(int order_id,int room_id,String room_name,String mobile);
 }

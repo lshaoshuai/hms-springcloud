@@ -1,5 +1,6 @@
 package com.hms.provider.service.hystrix;
 
+import com.hms.provider.model.dto.OrderFrontDto;
 import com.hms.provider.service.OmsFeignApi;
 import com.hms.wrapper.Wrapper;
 import org.springframework.stereotype.Component;
@@ -15,6 +16,11 @@ public class OmsFeignHystrix implements OmsFeignApi {
 
     @Override
     public Wrapper getOrderCount() {
+        return null;
+    }
+
+    @Override
+    public Wrapper commitLocalOrder(final OrderFrontDto orderFrontDto){
         return null;
     }
 }

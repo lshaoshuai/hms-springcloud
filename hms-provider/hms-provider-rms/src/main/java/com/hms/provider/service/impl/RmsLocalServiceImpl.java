@@ -13,7 +13,6 @@ import com.hms.provider.service.HbsFeignApi;
 import com.hms.provider.service.RmsActionService;
 import com.hms.provider.service.RmsFeignApi;
 import com.hms.provider.service.RmsLocalService;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -53,7 +52,7 @@ public class RmsLocalServiceImpl extends BaseService implements RmsLocalService 
             List<LocalRoomVo> list = new ArrayList<>();
             for(LocalRoomDo localRoomDo : roomInfoList){
                 if (localRoomDo.getFloor() == i){
-                    list.add(new LocalRoomVo(localRoomDo.getRoom_no(),localRoomDo.getRoom_status(),localRoomDo.getRoom_type()));
+                    list.add(new LocalRoomVo(localRoomDo.getId(),localRoomDo.getRoom_no(),localRoomDo.getRoom_status(),localRoomDo.getRoom_type(),localRoomDo.getPrice()));
                 }
             }
             floorlist.add(new FloorVo(i,list));
@@ -86,7 +85,7 @@ public class RmsLocalServiceImpl extends BaseService implements RmsLocalService 
         localRoomDo.setRoom_type_id(1);
         localRoomDo.setPrice(localRoomDto.getRoomPrice());
         int line = localRoomDao.insertOrUpdateRoomInfo(localRoomDo);
-        if(line > 0){
+        if(line >= 0){
             return true;
         }else{
             return false;
@@ -105,7 +104,7 @@ public class RmsLocalServiceImpl extends BaseService implements RmsLocalService 
         localRoomDo.setRoom_type(localRoomDto.getRoomType());
         localRoomDo.setRoom_type_id(1);
         int line = localRoomDao.updateLocalRoomInfoById(localRoomDo);
-        if(line > 0){
+        if(line >= 0){
             return true;
         }else{
             return false;
@@ -150,7 +149,7 @@ public class RmsLocalServiceImpl extends BaseService implements RmsLocalService 
     public boolean removeRoomInfo(int id){
 
         int line = localRoomDao.deleteRoomInfoById(id);
-        if(line > 0){
+        if(line >= 0){
             return true;
         }else{
             return false;
@@ -161,11 +160,14 @@ public class RmsLocalServiceImpl extends BaseService implements RmsLocalService 
     @Override
     public EmptyRoomVo getEmptyRoomByDynamic(StatusRoomDto statusRoomDto){
 
-        SearchRoomDto searchRoomDto =  new ModelMapper().map(statusRoomDto, SearchRoomDto.class);
-        List<LocalRoomVo> localRoomVos = switchRoomType(searchRoomDto);
+        List<LocalRoomVo> localRoomVos = new ArrayList<>();
+        List<LocalRoomDo> localRoomDos = localRoomDao.queryLocalEmptyRoomByDynamic(statusRoomDto);
+        for (LocalRoomDo localRoomDo : localRoomDos){
+            localRoomVos.add(new LocalRoomVo(localRoomDo.getId(),localRoomDo.getRoom_no(),localRoomDo.getRoom_status(),localRoomDo.getRoom_type(),200));
+        }
         return new EmptyRoomVo(
                 statusRoomDto.getPageNum(),
-                statusRoomDto.getPageSize(),
+                localRoomDao.countDynamicRoomTotal(1,statusRoomDto.getType(),statusRoomDto.getValue(),statusRoomDto.getStatus()),
                 "all",
                 localRoomVos,
                 rmsActionService.roomTypeList(1)
@@ -174,29 +176,11 @@ public class RmsLocalServiceImpl extends BaseService implements RmsLocalService 
 
     public List<LocalRoomVo> switchRoomType(SearchRoomDto searchRoomDto){
 
-        List<LocalRoomDo> localRoomDos = new ArrayList<>();
         List<LocalRoomVo> localRoomVos = new ArrayList<>();
-
-        switch (searchRoomDto.getType()){
-            case "room_type":
-            {
-                localRoomDos = localRoomDao.queryLocalRoomInfoByDynamic(searchRoomDto);
-                break;
-            }
-            case "room_no":
-            {
-                localRoomDos = localRoomDao.queryLocalRoomInfoByDynamic(searchRoomDto);
-                break;
-            }
-            default:
-                break;
-        }
-
+        List<LocalRoomDo> localRoomDos = localRoomDao.queryLocalRoomInfoByDynamic(searchRoomDto);
         for (LocalRoomDo localRoomDo : localRoomDos){
             localRoomVos.add(new LocalRoomVo(localRoomDo.getId(),localRoomDo.getRoom_no(),localRoomDo.getRoom_status(),localRoomDo.getRoom_type(),200));
         }
         return localRoomVos;
     }
-
-
 }

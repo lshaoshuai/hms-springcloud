@@ -42,6 +42,11 @@ public interface LocalRoomDao {
     @Select("select * from local_room_info where ${type}= #{value} and room_status = #{status} limit #{pageNum},#{pageSize}")
     List<LocalRoomDo> queryLocalEmptyRoomByDynamic(StatusRoomDto statusRoomDto);
 
+    @Select("select count(*) from local_room_info where ${type}= #{value}")
+    int queryDynamicRoomTotal(@Param("type") String type,@Param("value") String value);
+
+    @Select("select count(*) from local_room_info where hotel_id = #{hotelid} and ${type}= #{value} and room_status = #{status}")
+    int countDynamicRoomTotal(@Param("hotelid") int hotelid,@Param("type") String type,@Param("value") String value,@Param("status") int status);
 
     @Update("update local_room_info set floor = #{floor}, hotel_id = #{hotel_id}, room_no = #{room_no},room_status " +
             "= #{room_status},room_type_id = #{room_type_id},room_type = #{room_type},price = #{price} where id = #{id}")
@@ -49,6 +54,13 @@ public interface LocalRoomDao {
 
     @Update("update local_room_info set room_status = #{status} where id = #{id}")
     int updateLocalRoomInfoStatusById(@Param("status") int status,@Param("id") int id);
+
+    @Select("select price from local_room_info where id = #{id}")
+    int queryRoomPrice(int id);
+
+    @Select("SELECT id FROM local_room_info t1 JOIN (SELECT RAND() * (SELECT MAX(id) FROM local_room_info WHERE " +
+            "room_status = 5 and room_type = #{type}) AS nid) t2 ON t1.id > t2.nid LIMIT 1")
+    int queryRandomRoomByType(String type);
 
 //    class DynamicRoomInfoDaoProvider {
 //        public String findRoomList(@Param("type") String type,@Param("value") String value) {

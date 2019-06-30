@@ -30,13 +30,13 @@ public class OrderActionController extends BaseController {
     private OmsOrderService omsOrderService;
 
 
-    @PostMapping("/commit/{hotelid}/{roomid}")
+    @PostMapping("/commit/{hotelid}/{roomid}/{roomname}")
     @ApiOperation(httpMethod = "POST", value = "支付提交订单")
-    public Wrapper commitOrderForm(@PathVariable int hotelid,@PathVariable int roomid) {
+    public Wrapper commitOrderForm(@PathVariable int hotelid,@PathVariable int roomid,@PathVariable String roomname) {
 
         UserTokenDto userTokenDto = getLoginAuthDto();
-        logger.info("roomid:{},userToken:{} ",hotelid,userTokenDto);
-        boolean is_success = omsOrderService.commitOrder(hotelid,roomid,userTokenDto.getPhone_num());
+        logger.info("roomid:{},userToken:{} ",hotelid, userTokenDto);
+        boolean is_success = omsOrderService.commitOrder(hotelid,roomid,roomname,userTokenDto.getPhone_num());
         return WrapMapper.ok(is_success);
     }
 
@@ -45,7 +45,7 @@ public class OrderActionController extends BaseController {
     public Wrapper queryOrderDetailList(@PathVariable String userid) {
 
         UserTokenDto userTokenDto = getLoginAuthDto();
-        logger.info("userid:{},userToken:{}",userid,userTokenDto);
+        logger.info("userid:{},userToken:{}",userid, userTokenDto);
         OrderVo[] orderVos = omsOrderService.queryOrderInfo(userid);
         //CorrelationData消息的唯一id
         return WrapMapper.ok(orderVos);
@@ -54,7 +54,7 @@ public class OrderActionController extends BaseController {
     @PostMapping("/create/body")
     @ApiOperation(httpMethod = "POST", value = "生成订单信息")
     public Wrapper createOrderInfo(@RequestBody OrderDto orderDto) throws Exception {
-
+        logger.info("获取到的订单数据:{}",orderDto);
         UserTokenDto userTokenDto = getLoginAuthDto();
         logger.info("userToken:{}",userTokenDto);
         logger.info("获取到订单JSON数据{}",orderDto);

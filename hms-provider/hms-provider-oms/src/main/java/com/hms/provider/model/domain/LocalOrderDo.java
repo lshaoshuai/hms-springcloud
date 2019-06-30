@@ -50,4 +50,7 @@ public class LocalOrderDo implements Serializable {
     @Column(name = "hotel_id")
     private int hotel_id;
 
+    @Column(name = "money")
+    private int money;
+
 }

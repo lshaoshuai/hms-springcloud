@@ -3,7 +3,6 @@ package com.hms.provider.model.vo;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * @author luoshao
@@ -34,15 +33,15 @@ public class LocalOrderDetailVo implements Serializable {
 
     private String origin;
 
-    private Date checkIn;
+    private String checkIn;
 
-    private Date checkOut;
+    private String checkOut;
 
     private int checkInStatus;
 
     private double money;
 
-    public LocalOrderDetailVo(String orderId, String userId, String username, String phone, int roomId, String roomType, int roomNum, double price, String origin, Date checkIn, Date checkOut, int checkInStatus, double money) {
+    public LocalOrderDetailVo(String orderId, String userId, String username, String phone, int roomId, String roomType, int roomNum, double price, String origin, String checkIn, String checkOut, int checkInStatus, double money) {
         this.orderId = orderId;
         this.userId = userId;
         this.username = username;

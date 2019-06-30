@@ -15,20 +15,23 @@ import java.io.Serializable;
 @Entity(name = "userinfo")
 @Table(name = "user_info") //映射的表名称
 @Data
-public class UserInfo implements Serializable {
+public class UserDo implements Serializable {
 
     private static final long serialVersionUID = 5203316233473433307L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private long id;
 
-    @Column(length = 100)
+    @Column(name = "phone_num")
     private String phone_num;
 
-    @Column(length = 255)
+    @Column(name = "user_name")
     private String user_name;
 
-    @Column(length = 255)
-    private String user_token;
+    @Column(name = "user_id")
+    private String user_id;
+
+    @Column(name = "email")
+    private String email;
 
 }

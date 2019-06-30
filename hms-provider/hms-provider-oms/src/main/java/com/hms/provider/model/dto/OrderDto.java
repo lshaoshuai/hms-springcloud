@@ -24,6 +24,8 @@ public class OrderDto implements Serializable {
 
     private int room_id;
 
+    private int  hotel_id;
+
     private String hotel_name;
 
     private int room_count;

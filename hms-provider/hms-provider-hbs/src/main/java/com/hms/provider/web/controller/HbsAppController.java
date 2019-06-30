@@ -1,6 +1,8 @@
 package com.hms.provider.web.controller;
 
+import com.hms.annotation.NoNeedAccessAuthentication;
 import com.hms.core.support.BaseController;
+import com.hms.provider.model.dto.SearchHotelDto;
 import com.hms.provider.model.vo.HotelCountVo;
 import com.hms.provider.model.vo.HotelInfoVo;
 import com.hms.provider.service.HotelQueryService;
@@ -15,10 +17,7 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.MediaType;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -51,8 +50,9 @@ public class HbsAppController extends BaseController {
             @ApiImplicitParam(name = "offset", value = "位移数", required = true, dataType = "long", paramType = "path")
     })
     @HystrixCommand(fallbackMethod = "httpError")
-    public Wrapper queryHotelInfo(@PathVariable int index,@PathVariable int offset){
-        List<HotelInfoVo> hotelInfoVos = hotelQueryService.getHotelInfo(index,offset);
+    @NoNeedAccessAuthentication
+    public Wrapper queryHotelInfoList(@PathVariable int index,@PathVariable int offset){
+        List<HotelInfoVo> hotelInfoVos = hotelQueryService.getHotelInfoList(index,offset);
         return WrapMapper.ok(hotelInfoVos);
     }
 
@@ -60,21 +60,34 @@ public class HbsAppController extends BaseController {
         return WrapMapper.ok("" + i + j);
     }
 
-    @PostMapping("/change")
+    @PostMapping("/info/dynamic")
     @ApiOperation(httpMethod = "POST", value = "修改酒店信息")
-    public Wrapper changHotelInfo(){
-        return WrapMapper.ok();
+    @HystrixCommand(fallbackMethod = "httpError")
+    @NoNeedAccessAuthentication
+    public Wrapper queryDynamicHotelInfo(@RequestBody SearchHotelDto searchHotelDto){
+        List<HotelInfoVo> hotelInfoVos = hotelQueryService.getHotelByDynamic(searchHotelDto);
+        return WrapMapper.ok(hotelInfoVos);
     }
 
     @PostMapping("/count")
     @ApiOperation(httpMethod = "POST", value = "获取酒店统计数据")
+    @NoNeedAccessAuthentication
     public Wrapper countTotalInfo(){
-        int roomcount = (int)rmsFeignApi.getRoomCount(1).getResult();
+        int roomcount = (int)rmsFeignApi.getEmptyRoomCount(1,5,"hotel_id","1").getResult();
         int hotelcount = (int)omsFeignApi.getOrderCount().getResult();
         logger.info("roomcount :{} , ordercount: {}" ,roomcount, hotelcount);
         return WrapMapper.ok(
                 new HotelCountVo(roomcount,0,0,hotelcount)
         );
     }
+
+    @PostMapping("/single/info/{hotelid}")
+    @ApiOperation(httpMethod = "POST", value = "返回酒店信息")
+    @NoNeedAccessAuthentication
+    public Wrapper queryHotelInfo(@PathVariable int hotelid){
+        HotelInfoVo hotelInfoVo = hotelQueryService.getHotelInfo(hotelid);
+        return WrapMapper.ok(hotelInfoVo);
+    }
+
 
 }

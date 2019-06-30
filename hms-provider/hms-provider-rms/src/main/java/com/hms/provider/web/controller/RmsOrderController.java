@@ -36,7 +36,7 @@ public class RmsOrderController extends BaseController {
     public Wrapper queryRoomDetailList(@PathVariable int hotelid) {
 
         logger.info("queryUserOrderDetailList - 查询房间明细. hotelid={}", hotelid);
-        Long mobile = getLoginAuthDto().getPhone_num();
+        String mobile = getLoginAuthDto().getPhone_num();
         logger.info("操作人信息. mobile={}", mobile);
         List<RoomVo> roomvos = rmsActionService.getRoomsCountInfo(hotelid);
         logger.info("room信息. room[]={}", roomvos);
@@ -48,7 +48,7 @@ public class RmsOrderController extends BaseController {
     public Wrapper queryRoomCountList(@PathVariable int hotelid) {
 
         logger.info("queryUserOrderDetailList - 查询房间明细. hotelid={}", hotelid);
-        Long mobile = getLoginAuthDto().getPhone_num();
+        String mobile = getLoginAuthDto().getPhone_num();
         logger.info("操作人信息. mobile={}", mobile);
         List<RoomVo> roomRestVos = rmsActionService.getRoomsInfo(hotelid);
         logger.info("roomCount信息. room[]={}", roomRestVos);
@@ -61,7 +61,7 @@ public class RmsOrderController extends BaseController {
     public Wrapper querySingleRoomCount(@PathVariable int roomid) {
 
         logger.info("queryUserOrderDetailList - 查询房间明细. hotelid={}", roomid);
-        Long mobile = getLoginAuthDto().getPhone_num();
+        String mobile = getLoginAuthDto().getPhone_num();
         logger.info("操作人信息. mobile={}", mobile);
         int room_count = rmsActionService.getSingleRoomCountInfo(roomid);
         logger.info("roomCount信息:{}", room_count);
