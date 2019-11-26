@@ -6,6 +6,7 @@ import com.hms.provider.model.dto.SearchHotelDto;
 import com.hms.provider.model.vo.HotelCountVo;
 import com.hms.provider.model.vo.HotelInfoVo;
 import com.hms.provider.service.HotelQueryService;
+import com.hms.provider.service.ImsFeignApi;
 import com.hms.provider.service.OmsFeignApi;
 import com.hms.provider.service.RmsFeignApi;
 import com.hms.wrapper.WrapMapper;
@@ -43,6 +44,9 @@ public class HbsAppController extends BaseController {
     @Resource
     private RmsFeignApi rmsFeignApi;
 
+    @Resource
+    private ImsFeignApi imsFeignApi;
+
     @PostMapping("/info/{index}/{offset}")
     @ApiOperation(httpMethod = "POST", value = "返回酒店信息")
     @ApiImplicitParams({
@@ -75,9 +79,10 @@ public class HbsAppController extends BaseController {
     public Wrapper countTotalInfo(){
         int roomcount = (int)rmsFeignApi.getEmptyRoomCount(1,5,"hotel_id","1").getResult();
         int hotelcount = (int)omsFeignApi.getOrderCount().getResult();
-        logger.info("roomcount :{} , ordercount: {}" ,roomcount, hotelcount);
+        int stockcount =  (int)imsFeignApi.GetStockCount().getResult();
+        logger.info("roomcount :{} , ordercount: {}, stockcount: {}" ,roomcount, hotelcount,stockcount);
         return WrapMapper.ok(
-                new HotelCountVo(roomcount,0,0,hotelcount)
+                new HotelCountVo(roomcount,0,stockcount,hotelcount)
         );
     }
 

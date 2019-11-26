@@ -55,8 +55,8 @@ public class OrderActionController extends BaseController {
     @ApiOperation(httpMethod = "POST", value = "生成订单信息")
     public Wrapper createOrderInfo(@RequestBody OrderDto orderDto) throws Exception {
         logger.info("获取到的订单数据:{}",orderDto);
-        UserTokenDto userTokenDto = getLoginAuthDto();
-        logger.info("userToken:{}",userTokenDto);
+//        UserTokenDto userTokenDto = getLoginAuthDto();
+//        logger.info("userToken:{}",userTokenDto);
         logger.info("获取到订单JSON数据{}",orderDto);
         String is_success = omsOrderService.createOrderInfo(orderDto);
         if(is_success.isEmpty()){

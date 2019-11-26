@@ -9,6 +9,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/hms-provider/hms-provider-mms/pom.xml" />
         <option value="$PROJECT_DIR$/hms-provider/hms-provider-sms/pom.xml" />
         <option value="$PROJECT_DIR$/hms-provider/hms-server-config/pom.xml" />
         <option value="$PROJECT_DIR$/hms-provider/hms-server-eureka/pom.xml" />

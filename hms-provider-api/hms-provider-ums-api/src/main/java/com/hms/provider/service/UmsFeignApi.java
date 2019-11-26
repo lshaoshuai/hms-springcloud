@@ -18,11 +18,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(value = "hms-service-user",  fallback = UmsFeignHystrix.class)
 public interface UmsFeignApi {
 
-    @PostMapping(value =  "/rpc/local/custom")
+    @PostMapping(value =  "/rpc/ums/local/custom")
     @NoNeedAccessAuthentication
     Wrapper addCustomerInfo(@RequestBody CustomerDto customerDto);
 
-    @PostMapping(value =  "/rpc/local/custom/search")
+    @PostMapping(value =  "/rpc/ums/local/custom/search")
     @NoNeedAccessAuthentication
     Wrapper queryCustomerInfo(@RequestParam("userid") String userid);
 }

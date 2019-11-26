@@ -17,11 +17,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 @FeignClient(name = "hms-service-order",  fallback = OmsFeignHystrix.class)
 public interface OmsFeignApi {
 
-    @GetMapping(value =  "/rpc/local/count")
+    @GetMapping(value =  "/rpc/oms/local/count")
     @NoNeedAccessAuthentication
     Wrapper getOrderCount();
 
-    @PostMapping("/rpc/local/commit")
+    @PostMapping("/rpc/oms/local/commit")
     @NoNeedAccessAuthentication
     Wrapper commitLocalOrder(OrderFrontDto orderFrontDto);
 }

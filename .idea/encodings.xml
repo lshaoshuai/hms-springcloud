@@ -13,6 +13,7 @@
     <file url="file://$PROJECT_DIR$/hms-provider" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hms-provider-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hms-provider-api/hms-provider-hbs-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hms-provider-api/hms-provider-ims-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hms-provider-api/hms-provider-oms-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hms-provider-api/hms-provider-ums-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hms-provider-api/hsm-provider-rms-api" charset="UTF-8" />

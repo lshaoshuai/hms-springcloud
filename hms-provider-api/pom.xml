@@ -17,6 +17,8 @@
         <module>hms-provider-ums-api</module>
         <module>hms-provider-hbs-api</module>
         <module>hms-provider-oms-api</module>
+        <module>hms-provider-ims-api</module>
+        <module>hms-provider-ims-api</module>
     </modules>
     <dependencies>
         <dependency>

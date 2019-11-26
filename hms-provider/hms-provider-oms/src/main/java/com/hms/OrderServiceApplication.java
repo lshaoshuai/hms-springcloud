@@ -1,12 +1,13 @@
 package com.hms;
 
 
-import com.hms.core.annotation.CustomSpringCloudApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-//@EnableSwagger2
-//@SpringBootApplication
-@CustomSpringCloudApplication
+@EnableSwagger2
+@SpringBootApplication
+//@CustomSpringCloudApplication
 public class OrderServiceApplication {
 
     public static void main(String[] args) {

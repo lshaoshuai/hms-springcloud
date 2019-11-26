@@ -16,7 +16,7 @@
         <module name="hms-monitor" />
         <module name="hms-provider-hbs" />
         <module name="hms-provider-hbs-api" />
-        <module name="hms-provider-mms" />
+        <module name="hms-provider-ims-api" />
         <module name="hms-provider-oms" />
         <module name="hms-provider-oms-api" />
         <module name="hms-provider-rms" />
@@ -27,6 +27,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="hms-provider-mms" target="1.8" />
       <module name="hms-provider-sms" target="1.8" />
       <module name="hms-server-config" target="1.8" />
       <module name="hms-server-eureka" target="1.5" />
@@ -46,6 +47,7 @@
       <module name="hms-monitor" options="-nowarn" />
       <module name="hms-provider-hbs" options="-nowarn" />
       <module name="hms-provider-hbs-api" options="-nowarn" />
+      <module name="hms-provider-ims-api" options="-nowarn" />
       <module name="hms-provider-mms" options="-nowarn" />
       <module name="hms-provider-oms" options="-nowarn" />
       <module name="hms-provider-oms-api" options="-nowarn" />

@@ -1,10 +1,13 @@
 package com.hms;
 
 
-import com.hms.core.annotation.CustomSpringCloudApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-@CustomSpringCloudApplication
+//@CustomSpringCloudApplication
+@EnableSwagger2
+@SpringBootApplication
 public class RoomServiceApplication {
 
     public static void main(String[] args) {

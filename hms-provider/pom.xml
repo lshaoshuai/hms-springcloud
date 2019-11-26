@@ -10,7 +10,6 @@
         <module>hms-provider-ums</module>
         <module>hms-provider-oms</module>
         <module>hms-provider-hbs</module>
-        <module>hms-provider-mms</module>
     </modules>
 
     <!-- 父项目依赖 -->

@@ -1,6 +1,5 @@
 package com.hms.provider.service.impl;
 
-import com.google.common.base.Preconditions;
 import com.hms.RadomUtil;
 import com.hms.base.constant.GlobalConstant;
 import com.hms.core.support.BaseService;
@@ -9,10 +8,8 @@ import com.hms.provider.model.domain.OrderInfo;
 import com.hms.provider.model.dto.OrderDto;
 import com.hms.provider.model.dto.OrderFrontDto;
 import com.hms.provider.model.vo.OrderVo;
-import com.hms.provider.service.OmsFeignApi;
 import com.hms.provider.service.OmsOrderService;
 import com.hms.provider.service.RedisService;
-import com.hms.provider.service.RmsFeignApi;
 import org.modelmapper.ModelMapper;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.utils.SerializationUtils;
@@ -46,11 +43,11 @@ public class OmsOrderServiceImpl extends BaseService implements OmsOrderService 
     @Resource
     RedisService redisService;
 
-    @Autowired
-    OmsFeignApi omsFeignApi;
+//    @Autowired
+//    OmsFeignApi omsFeignApi;
 
-    @Autowired
-    RmsFeignApi rmsFeignApi;
+//    @Autowired
+//    RmsFeignApi rmsFeignApi;
 
     @Autowired
     private OrderDao orderDao;
@@ -64,7 +61,7 @@ public class OmsOrderServiceImpl extends BaseService implements OmsOrderService 
     }
 
     @Override
-//    @Transactional
+    @Transactional
     public String createOrderInfo(OrderDto orderdto){
 
 
@@ -118,7 +115,7 @@ public class OmsOrderServiceImpl extends BaseService implements OmsOrderService 
         orderDao.updateOrderInfo(1,order_id);
         OrderInfo orderInfo = orderDao.queryByOrderID(order_id + "");
         OrderFrontDto orderFrontDto = new OrderFrontDto();
-        orderFrontDto.setRoomId((int)rmsFeignApi.getRandomRoom(room_name).getResult()); //随机获取客房
+//        orderFrontDto.setRoomId((int)rmsFeignApi.getRandomRoom(room_name).getResult()); //随机获取客房
         orderFrontDto.setUserId(orderInfo.getUser_id());
         orderFrontDto.setCheckIn(orderInfo.getRoom_in_time());
         orderFrontDto.setCheckOut(orderInfo.getRoom_out_time());
@@ -126,8 +123,8 @@ public class OmsOrderServiceImpl extends BaseService implements OmsOrderService 
         orderFrontDto.setOrigin("妹团订购单");
         orderFrontDto.setUsername(mobile +"");
         orderFrontDto.setPhone(mobile + "");
-        boolean is_success = (boolean)omsFeignApi.commitLocalOrder(orderFrontDto).getResult();
-        Preconditions.checkArgument(is_success,"向酒店提交订单失败");
+//        boolean is_success = (boolean)omsFeignApi.commitLocalOrder(orderFrontDto).getResult();
+//        Preconditions.checkArgument(is_success,"向酒店提交订单失败");
         return true;
     }
 

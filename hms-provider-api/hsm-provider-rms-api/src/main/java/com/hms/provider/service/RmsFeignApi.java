@@ -17,31 +17,31 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(name = "hms-service-room",  fallback = RmsFeignHystrix.class)
 public interface RmsFeignApi {
 
-    @GetMapping(value =  "/rpc/local/count")
+    @GetMapping(value =  "/rpc/rms/local/count")
     @NoNeedAccessAuthentication
     Wrapper getRoomCount(@RequestParam("hotelid") int hotelid);
 
-    @GetMapping(value =  "/rpc/local/type")
+    @GetMapping(value =  "/rpc/rms/local/type")
     @NoNeedAccessAuthentication
     Wrapper getRoomTypeInfo(@RequestParam("id") int id);
 
-    @GetMapping(value =  "/rpc/local/room")
+    @GetMapping(value =  "/rpc/rms/local/room")
     @NoNeedAccessAuthentication
     Wrapper getLocalRoomInfo(@RequestParam("id") int id);
 
-    @PostMapping(value =  "/rpc/local/update")
+    @PostMapping(value =  "/rpc/rms/local/update")
     @NoNeedAccessAuthentication
     Wrapper updateLocalRoomInfo(@RequestParam("roomId") int roomId,@RequestParam("checkInStatus") int checkInStatus);
 
-    @GetMapping(value =  "/rpc/local/dynamic/cout")
+    @GetMapping(value =  "/rpc/rms/local/dynamic/count")
     @NoNeedAccessAuthentication
     Wrapper getEmptyRoomCount(@RequestParam("hotelid") int hotelid,@RequestParam("status") int status,@RequestParam("type") String type,@RequestParam("value") String value);
 
-    @GetMapping(value =  "/rpc/local/price")
+    @GetMapping(value =  "/rpc/rms/local/price")
     @NoNeedAccessAuthentication
     Wrapper getRoomPrice(@RequestParam("roomid") int roomid);
 
-    @GetMapping(value =  "/rpc/local/random")
+    @GetMapping(value =  "/rpc/rms/local/random")
     @NoNeedAccessAuthentication
     Wrapper getRandomRoom(@RequestParam("roomname") String roomname);
 }

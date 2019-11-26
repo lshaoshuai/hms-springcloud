@@ -36,13 +36,13 @@ public class OmsMvcConfig extends WebMvcConfigurerAdapter {
      *
      * @param registry the registry
      */
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        super.addInterceptors(registry);
-        registry.addInterceptor(vueViewInterceptor)
-                .addPathPatterns("/**")
-                .excludePathPatterns("/pay/alipayCallback", "/swagger-resources/**", "*.js", "/**/*.js", "*.css", "/**/*.css", "*.html", "/**/*.html");
-    }
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
+//        super.addInterceptors(registry);
+//        registry.addInterceptor(vueViewInterceptor)
+//                .addPathPatterns("/**")
+//                .excludePathPatterns("/pay/alipayCallback", "/swagger-resources/**", "*.js", "/**/*.js", "*.css", "/**/*.css", "*.html", "/**/*.html");
+//    }
 
     /**
      * 跨域

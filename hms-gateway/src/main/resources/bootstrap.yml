@@ -23,7 +23,6 @@ zuul:
     api-hotel:
       path: /hbs/** #会自动将server-id添加
       service-id: hms-service-hotel #zuul注册到eureka上去发现其它服务，对于同名的微服务会进行负载均衡
-      stripPrefix: true
       ribbon:
         eager-load:
           enabled: true
@@ -32,7 +31,7 @@ zuul:
       service-id: hms-service-stock #zuul注册到eureka上去发现其它服务，对于同名的微服务会进行负载均衡
       ribbon:
         eager-load:
-          enabled: false
+          enabled: true
     api-user:
       path: /ums/**
       service-id: hms-service-user #zuul注册到eureka上去发现其它服务，对于同名的微服务会进行负载均衡
@@ -43,20 +42,23 @@ zuul:
     api-order:
       path: /oms/**
       service-id: hms-service-order #zuul注册到eureka上去发现其它服务，对于同名的微服务会进行负载均衡
+      ribbon:
+        eager-load:
+          enabled: true
     api-room:
       path: /rms/**
       service-id: hms-service-room #zuul注册到eureka上去发现其它服务，对于同名的微服务会进行负载均衡
+      ribbon:
+        eager-load:
+          enabled: true
     api-manager:
       path: /mms/**
       service-id: hms-service-manager #zuul注册到eureka上去发现其它服务，对于同名的微服务会进行负载均衡
+      ribbon:
+        eager-load:
+          enabled: true
 #     uri: http://127.0.0.1:12224/ 通过url直接映射
 
-#服务器不用注册到其他服务器
-#eureka:
-#  client:
-#    registerWithEureka: false
-  #服务器不用去服务器抓取注册信息
-#    fetchRegistry: false
 eureka:
   instance:
     hostname: localhost # 服务提供者应用所在的主机（本地测试的话，使用localhost或者127.0.0.1即可，或者在host文件中指定一个虚拟域名也可以）

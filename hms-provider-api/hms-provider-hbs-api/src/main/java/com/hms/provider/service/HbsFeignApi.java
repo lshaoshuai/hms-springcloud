@@ -16,6 +16,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(name = "hms-service-hotel" ,fallback = HbsFeignHystrix.class)
 public interface HbsFeignApi {
 
-    @GetMapping(value =  "/local/floor")
+    @GetMapping(value =  "rpc/hbs/local/floor")
     Wrapper getFloorById(@RequestParam("hotelid") int hotelid);
 }

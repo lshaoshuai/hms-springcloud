@@ -38,7 +38,7 @@ public class CodeConsumer {
         try {
             // 处理消息
             logger.info("code消费者接收消息");
-//            emailService.sendSimpleMail("1939125539@qq.com","测试邮件",new String(message.getBody()));
+            emailService.sendSimpleMail("1939125539@qq.com","测试邮件",new String(message.getBody()));
             logger.info("获取的验证码为:{}",new String(message.getBody(),"utf-8"));
         }catch (Exception e){
             log.error("OrderConsumer  handleMessage {} , error:",message,e);
